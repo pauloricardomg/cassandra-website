@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://cassandra.apache.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://cassandra.apache.org/" rel="alternate" type="text/html" /><updated>2021-02-16T11:07:01+00:00</updated><id>http://cassandra.apache.org/</id><title type="html">Apache Cassandra Website</title><subtitle>The Apache Cassandra database is the right choice when you need scalability and high availability without compromising performance. Linear scalability and proven fault-tolerance on commodity hardware or cloud infrastructure make it the perfect platform for mission-critical data. Cassandra's support for replicating across multiple datacenters is best-in-class, providing lower latency for your users and the peace of mind of knowing that you can survive regional outages.
+</subtitle><entry><title type="html">Apache Cassandra Changelog #4 | February 2021</title><link href="http://cassandra.apache.org/blog/2021/02/11/cass-changelog_4.html" rel="alternate" type="text/html" title="Apache Cassandra Changelog #4 | February 2021" /><published>2021-02-11T00:00:00+00:00</published><updated>2021-02-11T00:00:00+00:00</updated><id>http://cassandra.apache.org/blog/2021/02/11/cass-changelog_4</id><content type="html" xml:base="http://cassandra.apache.org/blog/2021/02/11/cass-changelog_4.html">&lt;p&gt;Our monthly roundup of key activities and knowledge to keep the community informed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cassandra.apache.org/img/changelog_header.jpg&quot; alt=&quot;Apache Cassandra Changelog Header&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;release-notes&quot;&gt;Release Notes&lt;/h2&gt;
+
+&lt;h4 id=&quot;released&quot;&gt;Released&lt;/h4&gt;
+
+&lt;p&gt;Apache Cassandra &lt;a href=&quot;https://www.apache.org/dyn/closer.lua/cassandra/3.0.24/&quot;&gt;3.0.24&lt;/a&gt; (&lt;a href=&quot;https://downloads.apache.org/cassandra/3.0.24/apache-cassandra-3.0.24-bin.tar.gz.asc&quot;&gt;pgp&lt;/a&gt;, &lt;a href=&quot;https://downloads.apache.org/cassandra/3.0.24/apache-cassandra-3.0.24-bin.tar.gz.sha256&quot;&gt;sha256&lt;/a&gt; and &lt;a href=&quot;https://downloads.apache.org/cassandra/3.0.24/apache-cassandra-3.0.24-bin.tar.gz.sha512&quot;&gt;sha512&lt;/a&gt;). This is a security-related release for the 3.0 series and was released on February 1. Please read the &lt;a href=&quot;https://gitbox.apache.org/repos/asf?p=cassandra.git;a=blob_plain;f=NEWS.txt;hb=refs/tags/cassandra-3.0.24&quot;&gt;release notes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Apache Cassandra &lt;a href=&quot;https://www.apache.org/dyn/closer.lua/cassandra/3.11.10/apache-cassandra-3.11.10-bin.tar.gz&quot;&gt;3.11.10&lt;/a&gt; (&lt;a href=&quot;https://downloads.apache.org/cassandra/3.11.10/apache-cassandra-3.11.10-bin.tar.gz.asc&quot;&gt;pgp&lt;/a&gt;, &lt;a href=&quot;https://downloads.apache.org/cassandra/4.0-beta4/apache-cassandra-4.0-beta4-bin.tar.gz.sha256&quot;&gt;sha256&lt;/a&gt; and &lt;a href=&quot;https://downloads.apache.org/cassandra/3.11.10/apache-cassandra-3.11.10-bin.tar.gz.sha512&quot;&gt;sha512&lt;/a&gt;) was also released on February 1. You will find the &lt;a href=&quot;https://gitbox.apache.org/repos/asf?p=cassandra.git;a=blob_plain;f=NEWS.txt;hb=refs/tags/cassandra-3.11.10&quot;&gt;release notes here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Apache Cassandra &lt;a href=&quot;https://www.apache.org/dyn/closer.lua/cassandra/4.0-beta4/apache-cassandra-4.0-beta4-bin.tar.gz&quot;&gt;4.0-beta4&lt;/a&gt; (&lt;a href=&quot;https://downloads.apache.org/cassandra/4.0-beta4/apache-cassandra-4.0-beta4-bin.tar.gz.asc&quot;&gt;pgp&lt;/a&gt;, &lt;a href=&quot;https://downloads.apache.org/cassandra/4.0-beta4/apache-cassandra-4.0-beta4-bin.tar.gz.sha256&quot;&gt;sha256&lt;/a&gt; and &lt;a href=&quot;https://downloads.apache.org/cassandra/4.0-beta4/apache-cassandra-4.0-beta4-bin.tar.gz.sha512&quot;&gt;sha512&lt;/a&gt;) is the newest version which was released on December 30. Please pay attention to the &lt;a href=&quot;https://gitbox.apache.org/repos/asf?p=cassandra.git;a=blob_plain;f=CHANGES.txt;hb=refs/tags/cassandra-4.0-beta4&quot;&gt;release notes&lt;/a&gt; and let the community know if you encounter problems with any of the currently supported versions.&lt;/p&gt;
+
+&lt;p&gt;Join the Cassandra &lt;a href=&quot;https://cassandra.apache.org/community/&quot;&gt;mailing list&lt;/a&gt; to stay updated.&lt;/p&gt;
+
+&lt;h4 id=&quot;changed&quot;&gt;Changed&lt;/h4&gt;
+
+&lt;p&gt;A vulnerability rated &lt;code class=&quot;highlighter-rouge&quot;&gt;Important&lt;/code&gt; was found when using the &lt;code class=&quot;highlighter-rouge&quot;&gt;dc&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;rack&lt;/code&gt; internode_encryption setting. More details of CVE-2020-17516 Apache Cassandra internode encryption enforcement vulnerability are available on this &lt;a href=&quot;https://lists.apache.org/thread.html/r883eccde63637ea18ab5890c09c18e9573f8080bbccaa5ccd1304b8f%40%3Cuser.cassandra.apache.org%3E&quot;&gt;user thread&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note: The mitigation for 3.11.x users requires an update to 3.11.10 not 3.11.24, as originally stated in the CVE. (For anyone who has perfected a flux capacitor, we would like to borrow it.)&lt;/p&gt;
+
+&lt;p&gt;The current status of Cassandra 4.0 GA can be viewed on this &lt;a href=&quot;https://issues.apache.org/jira/secure/RapidBoard.jspa?rapidView=355&amp;amp;quickFilter=1661&quot;&gt;Jira board&lt;/a&gt; (ASF login required). RC is imminent with testing underway. The remaining tickets represent 3.3% of the total scope. Read the latest summary from the community &lt;a href=&quot;https://lists.apache.org/thread.html/rbc7e4664c0261b0d82baf4b303a7f10977bf138a7419d97d737e0b1a%40%3Cdev.cassandra.apache.org%3E&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;community-notes&quot;&gt;Community Notes&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Updates on Cassandra Enhancement Proposals (CEPs), how to contribute, and other community activities.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;added&quot;&gt;Added&lt;/h4&gt;
+
+&lt;p&gt;Apache Cassandra will be participating in the Google Summer of Code (GSoC) under the ASF umbrella as a mentoring organization. This is a great opportunity to get involved, especially for newcomers to the Cassandra community.&lt;/p&gt;
+
+&lt;p&gt;We’re curating a list of JIRA tickets this month, which will be labeled as &lt;code class=&quot;highlighter-rouge&quot;&gt;gsoc2021&lt;/code&gt;. This will make them visible in the &lt;a href=&quot;https://issues.apache.org/jira/browse/SYNAPSE-1125?jql=labels%20%3D%20gsoc2021&quot;&gt;Jira issue tracker&lt;/a&gt; for participants to see and connect with mentors.&lt;/p&gt;
+
+&lt;p&gt;If you would like to volunteer to be a mentor for a GSoC project, please tag the respective JIRA ticket with the &lt;code class=&quot;highlighter-rouge&quot;&gt;mentor&lt;/code&gt; label. Non-committers can volunteer to be a mentor as long as there is a committer as co-mentor. Projects can be mentored by one or more co-mentors.&lt;/p&gt;
+
+&lt;p&gt;Thanks to Paulo Motta for proposing the idea and getting the ticket list going.&lt;/p&gt;
+
+&lt;h4 id=&quot;added-1&quot;&gt;Added&lt;/h4&gt;
+
+&lt;p&gt;Apache Zeppelin &lt;a href=&quot;http://zeppelin.apache.org/download.html&quot;&gt;0.9.0&lt;/a&gt; was released on January 15. Zeppelin is a collaborative data analytics and visualization tool for distributed, general-purpose data processing system, which supports Apache Cassandra and others. The release notes for the Cassandra CQL Interpreter are available &lt;a href=&quot;http://zeppelin.apache.org/docs/0.9.0/interpreter/cassandra.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;changed-1&quot;&gt;Changed&lt;/h4&gt;
+
+&lt;p&gt;For the GA of Apache Cassandra 4.0, any claim of support for Python 2 will be dropped from update documentation. We will also introduce a warning when running in Python 2.7. Support for Python 3 will be backported to at least 3.11, due to existing tickets, but we will undertake the work needed to make packaging and internal tooling support Python 3.&lt;/p&gt;
+
+&lt;h4 id=&quot;changed-2&quot;&gt;Changed&lt;/h4&gt;
+
+&lt;p&gt;The Kubernetes SIG is discussing how to encourage more participation and to structure SIG meetings around updates on Kubernetes and Cassandra. We also intend to invite other projects (like OpenEDS, Prometheus, and others) to discuss how we can make Cassandra and Kubernetes better. As well as updates, the group discussed handling large-scale backups inside Kubernetes and using S3 APIs to store images. &lt;a href=&quot;https://www.youtube.com/watch?v=X5mEgFquIoo&quot;&gt;Watch here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.youtube.com/watch?v=X5mEgFquIoo&quot;&gt;&lt;img src=&quot;http://img.youtube.com/vi/X5mEgFquIoo/0.jpg&quot; alt=&quot;kubernetes-sig-meeting-2021-01-14&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;user-space&quot;&gt;User Space&lt;/h2&gt;
+
+&lt;h4 id=&quot;backblaze&quot;&gt;Backblaze&lt;/h4&gt;
+
+&lt;p&gt;“Backblaze uses Apache Cassandra, a high-performance, scalable distributed database to help manage hundreds of petabytes of data.” - &lt;a href=&quot;https://www.backblaze.com/blog/wide-partitions-in-apache-cassandra-3-11/&quot;&gt;Andy Klein&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;witfoo&quot;&gt;Witfoo&lt;/h4&gt;
+
+&lt;p&gt;Witfoo uses Cassandra for big data needs in cybersecurity operations. In response to the recent licensing changes at Elastic, Witfoo decided to blog about its journey away from Elastic to Apache Cassandra in 2019. - &lt;a href=&quot;https://www.witfoo.com/blog/our-move-from-elastic-to-cassandra/&quot;&gt;Witfoo.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Do you have a Cassandra case study to share? Email &lt;a href=&quot;mailto:cassandra@constantia.io&quot;&gt;cassandra@constantia.io&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;in-the-news&quot;&gt;In the News&lt;/h2&gt;
+
+&lt;p&gt;The New Stack: &lt;a href=&quot;https://thenewstack.io/what-is-data-management-in-the-kubernetes-age/&quot;&gt;What Is Data Management in the Kubernetes Age?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;eWeek: &lt;a href=&quot;https://www.eweek.com/database/top-vendors-of-database-management-software-for-2021&quot;&gt;Top Vendors of Database Management Software for 2021&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Software Testing Tips and Tricks: &lt;a href=&quot;https://www.softwaretesttips.com/big-data-tools/&quot;&gt;Top 10 Big Data Tools (Big Data Analytics Tools) in 2021&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;InfoQ: &lt;a href=&quot;https://www.infoq.com/news/2021/01/k8ssandra-cassandra-kubernetes/&quot;&gt;K8ssandra: Production-Ready Platform for Running Apache Cassandra on Kubernetes&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cassandra-tutorials--more&quot;&gt;Cassandra Tutorials &amp;amp; More&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://thelastpickle.com/blog/2021/01/31/cassandra_and_kubernetes_cass_operator.html&quot;&gt;Creating Flamegraphs with Apache Cassandra in Kubernetes (cass-operator)&lt;/a&gt; - Mick Semb Wever, The Last Pickle&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.anant.us/apache-cassandra-the-interplanetary-database/&quot;&gt;Apache Cassandra : The Interplanetary Database&lt;/a&gt; - Rahul Singh, Anant&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.rosehosting.com/blog/how-to-install-apache-cassandra-on-ubuntu-20-04/&quot;&gt;How to Install Apache Cassandra on Ubuntu 20.04&lt;/a&gt; - Jeff Wilson, RoseHosting&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://thelastpickle.com/blog/2021/01/29/impacts-of-changing-the-number-of-vnodes.html&quot;&gt;The Impacts of Changing the Number of VNodes in Apache Cassandra&lt;/a&gt; - Anthony Grasso, The Last Pickle&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.witfoo.com/blog/cassandra-4-0-testing/&quot;&gt;CASSANDRA 4.0 TESTING&lt;/a&gt; - Charles Herring, Witfoo&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cassandra.apache.org/img/changelog_footer.jpg&quot; alt=&quot;Apache Cassandra Changelog Footer&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Cassandra Changelog is curated by the community. Please send submissions to &lt;a href=&quot;mailto:cassandra@constantia.io&quot;&gt;cassandra@constantia.io&lt;/a&gt;.&lt;/p&gt;</content><author><name>the Apache Cassandra Community</name></author><summary type="html">Our monthly roundup of key activities and knowledge to keep the community informed.</summary></entry><entry><title type="html">Apache Cassandra Changelog #3 | January 2021</title><link href="http://cassandra.apache.org/blog/2021/01/19/cass-changelog_3.html" rel="alternate" type="text/html" title="Apache Cassandra Changelog #3 | January 2021" /><published>2021-01-19T00:00:00+00:00</published><updated>2021-01-19T00:00:00+00:00</updated><id>http://cassandra.apache.org/blog/2021/01/19/cass-changelog_3</id><content type="html" xml:base="http://cassandra.apache.org/blog/2021/01/19/cass-changelog_3.html">&lt;p&gt;Our monthly roundup of key activities and knowledge to keep the community informed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/changelog_header.jpg&quot; alt=&quot;Apache Cassandra Changelog Header&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;release-notes&quot;&gt;Release Notes&lt;/h2&gt;
+
+&lt;h4 id=&quot;released&quot;&gt;&lt;strong&gt;Released&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Apache Cassandra &lt;a href=&quot;https://www.apache.org/dyn/closer.lua/cassandra/4.0-beta4/apache-cassandra-4.0-beta4-bin.tar.gz&quot;&gt;4.0-beta4&lt;/a&gt; (&lt;a href=&quot;https://downloads.apache.org/cassandra/4.0-beta4/apache-cassandra-4.0-beta4-bin.tar.gz.asc&quot;&gt;pgp&lt;/a&gt;, &lt;a href=&quot;https://downloads.apache.org/cassandra/4.0-beta4/apache-cassandra-4.0-beta4-bin.tar.gz.sha256&quot;&gt;sha256&lt;/a&gt; and &lt;a href=&quot;https://downloads.apache.org/cassandra/4.0-beta4/apache-cassandra-4.0-beta4-bin.tar.gz.sha512&quot;&gt;sha512&lt;/a&gt;) was released on December 30. Please pay attention to &lt;a href=&quot;https://gitbox.apache.org/repos/asf?p=cassandra.git;a=blob_plain;f=CHANGES.txt;hb=refs/tags/cassandra-4.0-beta4&quot;&gt;release notes&lt;/a&gt; and let the community know if you encounter problems. Join the Cassandra &lt;a href=&quot;https://cassandra.apache.org/community/&quot;&gt;mailing list&lt;/a&gt; to stay updated.&lt;/p&gt;
+
+&lt;h4 id=&quot;changed&quot;&gt;&lt;strong&gt;Changed&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The current status of Cassandra 4.0 GA can be viewed on this &lt;a href=&quot;https://issues.apache.org/jira/secure/RapidBoard.jspa?rapidView=355&amp;amp;quickFilter=1661&quot;&gt;Jira board&lt;/a&gt; (ASF login required). RC is imminent with testing underway. Read the latest summary from the community &lt;a href=&quot;https://lists.apache.org/thread.html/r0caf3bc4c3d5b2ef2a9cc299b65a13ce55fa925ceeb404c986809839%40%3Cdev.cassandra.apache.org%3E&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;community-notes&quot;&gt;Community Notes&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Updates on Cassandra Enhancement Proposals (CEPs), how to contribute, and other community activities.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;added&quot;&gt;&lt;strong&gt;Added&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The Cassandra community welcomed one new PMC member and five new committers in 2020! Congratulations to &lt;strong&gt;Mick Semb Wever&lt;/strong&gt; who joined the PMC and &lt;strong&gt;Jordan West&lt;/strong&gt;, &lt;strong&gt;David Capwell&lt;/strong&gt;, &lt;strong&gt;Zhao Yang&lt;/strong&gt;, &lt;strong&gt;Ekaterina Dimitrova&lt;/strong&gt;, and &lt;strong&gt;Yifan Cai&lt;/strong&gt; who accepted invitations to become Cassandra committers!&lt;/p&gt;
+
+&lt;h4 id=&quot;changed-1&quot;&gt;&lt;strong&gt;Changed&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The Kubernetes SIG is discussing how to extend the group’s scope beyond the operator, as well as sharing an update on current operator merge efforts in the latest meeting. &lt;a href=&quot;https://www.youtube.com/watch?v=3X0Ulor3THU&amp;amp;feature=youtu.be&quot;&gt;Watch here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=3X0Ulor3THU&amp;amp;t=135s&quot;&gt;&lt;img src=&quot;https://i.ytimg.com/vi/3X0Ulor3THU/sddefault.jpg&quot; alt=&quot;IApache Cassandra Kubernetes SIG Meeting Header&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;user-space&quot;&gt;User Space&lt;/h2&gt;
+
+&lt;h4 id=&quot;keenio&quot;&gt;&lt;strong&gt;Keen.io&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Under the covers, Keen leverages Kafka, Apache Cassandra NoSQL database and the Apache Spark analytics engine, adding a RESTful API and a number of SDKs for different languages. Keen enriches streaming data with relevant metadata and enables customers to stream enriched data to Amazon S3 or any other data store. - &lt;a href=&quot;https://siliconangle.com/2020/10/09/data-firehose-next-generation-streaming-technologies-goes-cloud-native/&quot;&gt;Keen.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;monzo&quot;&gt;&lt;strong&gt;Monzo&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Suhail Patel explains how Monzo prepared for the recent crowdfunding (run entirely through its app, using the very same platform that runs the bank) which saw more than 9,000 people investing in the first five minutes. He covers Monzo’s microservice architecture (on Go and Kubernetes) and how they profiled and optimized key platform components such as Cassandra and Linkerd. - &lt;a href=&quot;https://www.infoq.com/presentations/monzo-microservices-arch/?utm_source=presentations&amp;amp;utm_medium=london&amp;amp;utm_campaign=qcon&quot;&gt;Suhil Patel&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;in-the-news&quot;&gt;In the News&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;ZDNet -&lt;/strong&gt; &lt;a href=&quot;https://www.zdnet.com/article/meet-stargate-datastaxs-graphql-for-databases-first-stop-cassandra/&quot;&gt;Meet Stargate, DataStax’s GraphQL for databases. First stop - Cassandra&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CIO -&lt;/strong&gt; &lt;a href=&quot;https://www.cio.com/article/3601191/its-a-good-day-to-corral-data-sprawl.html&quot;&gt;It’s a good day to corral data sprawl&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TechTarget -&lt;/strong&gt; &lt;a href=&quot;https://searchdatamanagement.techtarget.com/news/252493551/Stargate-API-brings-GraphQL-to-Cassandra-Database&quot;&gt;Stargate API brings GraphQL to Cassandra database&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ODBMS -&lt;/strong&gt; &lt;a href=&quot;http://www.odbms.org/2020/12/on-the-cassandra-4-0-beta-release-qa-with-ekaterina-dimitrova-apache-cassandra-contributor/&quot;&gt;On the Cassandra 4.0 beta release. Q&amp;amp;A with Ekaterina Dimitrova, Apache Cassandra Contributor&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cassandra-tutorials--more&quot;&gt;Cassandra Tutorials &amp;amp; More&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.confessionsofadataguy.com/intro-to-apache-cassandra-for-data-engineers/&quot;&gt;Intro to Apache Cassandra for Data Engineers&lt;/a&gt; - Daniel Beach, Confessions of a Data Guy&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://thelastpickle.com/blog/2020/12/17/impacts-of-many-columns-in-cassandra-table.html&quot;&gt;Impacts of many columns in a Cassandra table&lt;/a&gt; - Alex Dejanovski, The Last Pickle&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/flant-com/migrating-cassandra-between-kubernetes-clusters-ae4ab4ada028&quot;&gt;Migrating Cassandra from one Kubernetes cluster to another without data loss&lt;/a&gt; - Flant staff&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.deep.bi/blog/real-time-stream-analytics-and-user-scoring-using-apache-flink-druid-cassandra-at-deep-bi&quot;&gt;Real-time Stream Analytics and User Scoring Using Apache Druid, Flink &amp;amp; Cassandra at Deep.BI&lt;/a&gt; - Hisham Itani, Deep.BI&lt;/p&gt;
+
+&lt;p&gt;User thread: &lt;a href=&quot;https://lists.apache.org/thread.html/rb92c715974408a19961733d6b744c36e100280259b1c6ecbc607c5fd%40%3Cuser.cassandra.apache.org%3E&quot;&gt;Network Bandwidth and Multi-DC replication&lt;/a&gt; (Login required)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/changelog_footer.jpg&quot; alt=&quot;Apache Cassandra Changelog Footer&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Cassandra Changelog is curated by the community. Please send submissions to &lt;a href=&quot;mailto:cassandra@constantia.io&quot;&gt;cassandra@constantia.io&lt;/a&gt;.&lt;/p&gt;</content><author><name>the Apache Cassandra Community</name></author><summary type="html">Our monthly roundup of key activities and knowledge to keep the community informed.</summary></entry><entry><title type="html">Apache Cassandra Changelog #2 | December 2020</title><link href="http://cassandra.apache.org/blog/2020/12/01/cass_changelog_2.html" rel="alternate" type="text/html" title="Apache Cassandra Changelog #2 | December 2020" /><published>2020-12-01T00:00:00+00:00</published><updated>2020-12-01T00:00:00+00:00</updated><id>http://cassandra.apache.org/blog/2020/12/01/cass_changelog_2</id><content type="html" xml:base="http://cassandra.apache.org/blog/2020/12/01/cass_changelog_2.html">&lt;p&gt;Our monthly roundup of key activities and knowledge to keep the community informed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/changelog_header.jpg&quot; alt=&quot;Apache Cassandra Changelog Header&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;release-notes&quot;&gt;Release Notes&lt;/h2&gt;
+
+&lt;h4 id=&quot;released&quot;&gt;&lt;strong&gt;Released&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Apache #Cassandra 4.0-beta3, 3.11.9, 3.0.23, and 2.2.19 were released on November 4 and are &lt;a href=&quot;https://cassandra.apache.org/download/&quot;&gt;in the repositories&lt;/a&gt;. Please pay attention to release notes and let the community know if you encounter problems. Join the Cassandra &lt;a href=&quot;https://cassandra.apache.org/community/&quot;&gt;mailing list&lt;/a&gt; to stay updated.&lt;/p&gt;
+
+&lt;h4 id=&quot;changed&quot;&gt;&lt;strong&gt;Changed&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Cassandra 4.0 is progressing toward GA. There are 1,390 total tickets and remaining tickets represent 5.5% of total scope. Read the &lt;a href=&quot;https://lists.apache.org/thread.html/r9c6cc19f67d3259e64abbe2b960b8914476d9bfa2463d57c6d5cc44b%40%3Cdev.cassandra.apache.org%3E&quot;&gt;full summary&lt;/a&gt; shared to the dev mailing list and take a look at the &lt;a href=&quot;https://issues.apache.org/jira/secure/RapidBoard.jspa?rapidView=355&amp;amp;quickFilter=1661&amp;amp;quickFilter=1658&quot;&gt;open tickets&lt;/a&gt; that need reviewers.&lt;/p&gt;
+
+&lt;p&gt;Cassandra 4.0 will be dropping support for older distributions of CentOS 5, Debian 4, and Ubuntu 7.10. &lt;a href=&quot;https://lists.apache.org/thread.html/r513c507ef19a8524ad5389e548f3d5bbfeb9e7747f3ae4c57ec27329%40%3Cdev.cassandra.apache.org%3E&quot;&gt;Learn more&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;community-notes&quot;&gt;Community Notes&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Updates on Cassandra Enhancement Proposals (CEPs), how to contribute, and other community activities.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;added&quot;&gt;&lt;strong&gt;Added&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The community weighed options to address reads inconsistencies for Compact Storage as noted in ticket &lt;a href=&quot;https://issues.apache.org/jira/browse/CASSANDRA-16217&quot;&gt;CASSANDRA-16217&lt;/a&gt; (committed). The conversation continues in ticket &lt;a href=&quot;https://issues.apache.org/jira/browse/CASSANDRA-16226&quot;&gt;CASSANDRA-16226&lt;/a&gt; with the aim of ensuring there are no huge performance regressions for common queries when you upgrade from 2.x to 3.0 with Compact Storage tables or drop it from a table on 3.0+.&lt;/p&gt;
+
+&lt;h4 id=&quot;added-1&quot;&gt;&lt;strong&gt;Added&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CASSANDRA-16222&quot;&gt;CASSANDRA-16222&lt;/a&gt; is a Spark library that can compact and read raw Cassandra SSTables into SparkSQL. By reading the sstables directly from a snapshot directory, one can achieve high performance with minimal impact to a production cluster. It was used to successfully export a 32TB Cassandra table (46bn CQL rows) to HDFS in Parquet format in around 70 minutes, a 20x improvement on previous solutions.&lt;/p&gt;
+
+&lt;h4 id=&quot;changed-1&quot;&gt;&lt;strong&gt;Changed&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Great news for &lt;a href=&quot;https://cwiki.apache.org/confluence/display/CASSANDRA/CEP-2+Kubernetes+Operator&quot;&gt;CEP-2: Kubernetes Operator&lt;/a&gt;, the community has agreed to &lt;a href=&quot;https://lists.apache.org/thread.html/r9e1ff94d7b35cfc663bfa72d4ed3767e963e890f9e1199bfdb96bff0%40%3Cdev.cassandra.apache.org%3E&quot;&gt;create a community-based operator&lt;/a&gt; by merging the cass-operator and CassKop. The work being done can be viewed on GitHub &lt;a href=&quot;https://github.com/datastax/cass-operator&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;released-1&quot;&gt;&lt;strong&gt;Released&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The Reaper community &lt;a href=&quot;https://thelastpickle.com/blog/2020/10/26/reaper-2_1-released-with-astra-support.html&quot;&gt;announced v2.1&lt;/a&gt; of its tool that schedules and orchestrates repairs of Apache Cassandra clusters. Read the &lt;a href=&quot;http://cassandra-reaper.io/docs/&quot;&gt;docs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;released-2&quot;&gt;&lt;strong&gt;Released&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Apache Cassandra 4.0-beta-1 was &lt;a href=&quot;https://lists.apache.org/thread.html/r040f39dcc038d607c0cc36731150ce8ecb67d7399304db97e7f8b38b%40%3Cuser.cassandra.apache.org%3E&quot;&gt;released on FreeBSD&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;user-space&quot;&gt;User Space&lt;/h2&gt;
+
+&lt;h4 id=&quot;netflix&quot;&gt;&lt;strong&gt;Netflix&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;“With these optimized Cassandra clusters in place, it now costs us 71% less to operate clusters and we could store 35x more data than our previous configuration.” - &lt;a href=&quot;https://netflixtechblog.com/building-netflixs-distributed-tracing-infrastructure-bb856c319304&quot;&gt;Maulik Pandey&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;yelp&quot;&gt;&lt;strong&gt;Yelp&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;“Cassandra is a distributed wide-column NoSQL datastore and is used at Yelp for both primary and derived data. Yelp’s infrastructure for Cassandra has been deployed on AWS EC2 and ASG (Autoscaling Group) for a while now. Each Cassandra cluster in production spans multiple AWS regions.” - &lt;a href=&quot;https://engineeringblog.yelp.com/2020/11/orchestrating-cassandra-on-kubernetes-with-operators.html&quot;&gt;Raghavendra D Prabhu&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;in-the-news&quot;&gt;In the News&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;DevPro Journal&lt;/strong&gt; - &lt;a href=&quot;https://www.devprojournal.com/technology-trends/open-source/whats-included-in-the-cassandra-4-0-release/&quot;&gt;What’s included in the Cassandra 4.0 Release?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JAXenter&lt;/strong&gt; - &lt;a href=&quot;https://jaxenter.com/cloud-native-cassandra-172909.html&quot;&gt;Moving to cloud-native applications and data with Kubernetes and Apache Cassandra&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;DZone&lt;/strong&gt; - &lt;a href=&quot;https://dzone.com/articles/improving-apache-cassandras-front-door-and-backpre&quot;&gt;Improving Apache Cassandra’s Front Door and Backpressure&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ApacheCon&lt;/strong&gt; - &lt;a href=&quot;https://www.youtube.com/watch?v=rjCVqjLRALo&quot;&gt;Building Apache Cassandra 4.0: behind the scenes&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cassandra-tutorials--more&quot;&gt;Cassandra Tutorials &amp;amp; More&lt;/h2&gt;
+
+&lt;p&gt;Users in search of a tool for scheduling backups and performing restores with cloud storage support (archiving to AWS S3, GCS, etc) should consider &lt;a href=&quot;https://github.com/thelastpickle/cassandra-medusa/wiki&quot;&gt;Cassandra Medusa&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.mayadata.io/apache-cassandra-deployment-on-openebs-and-monitoring-on-kubera&quot;&gt;Apache Cassandra Deployment on OpenEBS and Monitoring on Kubera&lt;/a&gt; - Abhishek Raj, MayaData&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Z0NXWmZAB8s&quot;&gt;Lucene Based Indexes on Cassandra&lt;/a&gt; - Rahul Singh, Anant&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8QV2Mc-1s64&quot;&gt;How Netflix Manages Version Upgrades of Cassandra at Scale&lt;/a&gt; - Sumanth Pasupuleti, Netflix&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://thelastpickle.com/blog/2020/11/25/impacts-of-many-tables-on-cassandra.html&quot;&gt;Impacts of many tables in a Cassandra data model&lt;/a&gt; - Alex Dejanovski, The Last Pickle&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=eTUXQS7RUQw&amp;amp;list=PLU2OcwpQkYCy_awEe5xwlxGTk5UieA37m&amp;amp;index=181&quot;&gt;Cassandra Upgrade in production : Strategies and Best Practices&lt;/a&gt; - Laxmikant Upadhyay, American Express&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@jeromatron/apache-cassandra-collections-and-tombstones-a45315e97cbc&quot;&gt;Apache Cassandra Collections and Tombstones&lt;/a&gt; - Jeremy Hanna&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://itnext.io/spark-cassandra-all-you-need-to-know-tips-and-optimizations-d3810cc0bd4e&quot;&gt;Spark + Cassandra, All You Need to Know: Tips and Optimizations&lt;/a&gt; - Javier Ramos, ITNext&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.techrepublic.com/article/how-to-install-the-apache-cassandra-nosql-database-server-on-ubuntu-20-04/&quot;&gt;How to install the Apache Cassandra NoSQL database server on Ubuntu 20.04&lt;/a&gt; - Jack Wallen, TechRepublic&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://sindhumurugavel.medium.com/how-to-deploy-cassandra-on-openshift-and-open-it-up-to-remote-connections-c7783861b868&quot;&gt;How to deploy Cassandra on Openshift and open it up to remote connections&lt;/a&gt; - Sindhu Murugavel&lt;/p&gt;
+
+&lt;h2&gt;&lt;img src=&quot;/img/changelog_footer.jpg&quot; alt=&quot;Apache Cassandra Changelog Footer&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/h2&gt;
+
+&lt;p&gt;Cassandra Changelog is curated by the community. Please send submissions to &lt;a href=&quot;mailto:cassandra@constantia.io&quot;&gt;cassandra@constantia.io&lt;/a&gt;.&lt;/p&gt;</content><author><name>the Apache Cassandra Community</name></author><summary type="html">Our monthly roundup of key activities and knowledge to keep the community informed.</summary></entry><entry><title type="html">Apache Cassandra Changelog #1 (October 2020)</title><link href="http://cassandra.apache.org/blog/2020/10/28/cass_changelog_1.html" rel="alternate" type="text/html" title="Apache Cassandra Changelog #1 (October 2020)" /><published>2020-10-28T00:00:00+00:00</published><updated>2020-10-28T00:00:00+00:00</updated><id>http://cassandra.apache.org/blog/2020/10/28/cass_changelog_1</id><content type="html" xml:base="http://cassandra.apache.org/blog/2020/10/28/cass_changelog_1.html">&lt;p&gt;Introducing the first Cassandra Changelog blog! Our monthly roundup of key activities and knowledge to keep the community informed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/changelog_header.jpg&quot; alt=&quot;Cassandra Changelog header&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;release-notes&quot;&gt;Release Notes&lt;/h2&gt;
+
+&lt;h4 id=&quot;updated&quot;&gt;Updated&lt;/h4&gt;
+
+&lt;p&gt;The most current Apache Cassandra releases are 4.0-beta2, 3.11.8, 3.0.22, 2.2.18 and 2.1.22 released on August 31 and are &lt;a href=&quot;https://cassandra.apache.org/download/&quot;&gt;in the repositories&lt;/a&gt;. The next cut of releases will be out soon―join the Cassandra &lt;a href=&quot;https://cassandra.apache.org/community/&quot;&gt;mailing list&lt;/a&gt; to stay up-to-date.&lt;/p&gt;
+
+&lt;p&gt;We continue to make progress toward the 4.0 GA release with the overarching goal of it being at a state where major users should feel confident running it in production when it is cut. Over 1,300 Jira tickets have been closed and &lt;a href=&quot;https://issues.apache.org/jira/projects/CASSANDRA/versions/12346094&quot;&gt;less than 100 remain&lt;/a&gt; as of this post. To gain this confidence, there are various ongoing testing efforts involving correctness, performance, and ease of use.&lt;/p&gt;
+
+&lt;h4 id=&quot;added&quot;&gt;Added&lt;/h4&gt;
+
+&lt;p&gt;With CASSANDRA-15013, the community improved Cassandra's ability to &lt;a href=&quot;https://cassandra.apache.org/blog/2020/09/03/improving-resiliency.html&quot;&gt;handle high throughput workloads&lt;/a&gt;, while having enough safeguards in place to protect itself from potentially going out of memory.&lt;/p&gt;
+
+&lt;h4 id=&quot;added-1&quot;&gt;Added&lt;/h4&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/apache/cassandra-harry/blob/master/README.md&quot;&gt;Harry project&lt;/a&gt; is a fuzz testing tool that aims to generate reproducible workloads that are as close to real-life as possible, while being able to efficiently verify the cluster state against the model without pausing the workload itself.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Check out Harry, a fuzz-testing tool for Apache Cassandra, the best way to test databases or storage engines you&amp;#39;ve ever used: &lt;a href=&quot;https://t.co/WjtkIMMrXp&quot;&gt;https://t.co/WjtkIMMrXp&lt;/a&gt;&lt;/p&gt;&amp;mdash; αλεx π (@ifesdjeen) &lt;a href=&quot;https://twitter.com/ifesdjeen/status/1308036563402719234?ref_src=twsrc%5Etfw&quot;&gt;September 21, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;h4 id=&quot;added-2&quot;&gt;Added&lt;/h4&gt;
+
+&lt;p&gt;The community published its first &lt;a href=&quot;https://cassandra.apache.org/blog/2020/09/17/cassandra-usage-report-2020.html&quot;&gt;Apache Cassandra Usage Report 2020&lt;/a&gt; detailing findings from a comprehensive global survey of 901 practitioners on Cassandra usage to provide a baseline understanding of who, how, and why organizations use Cassandra.&lt;/p&gt;
+
+&lt;h2 id=&quot;community-notes&quot;&gt;Community Notes&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Updates on new and active Cassandra Enhancement Proposals (CEPs) and how to contribute.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;changed&quot;&gt;Changed&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cwiki.apache.org/confluence/display/CASSANDRA/CEP-2+Kubernetes+Operator&quot;&gt;CEP-2: Kubernetes Operator&lt;/a&gt; was introduced this year and is an active discussion on creation of a community-based operator with the goal of making it easy to run Cassandra on Kubernetes.&lt;/p&gt;
+
+&lt;h4 id=&quot;added-3&quot;&gt;Added&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cwiki.apache.org/confluence/display/CASSANDRA/CEP-7%3A+Storage+Attached+Index&quot;&gt;CEP-7: Storage Attached Index (SAI)&lt;/a&gt; is a new secondary index for Cassandra that builds on the advancements made with SASI. It is intended to replace the existing built-in secondary index implementations.&lt;/p&gt;
+
+&lt;h4 id=&quot;added-4&quot;&gt;Added&lt;/h4&gt;
+
+&lt;p&gt;Cassandra was selected by the ASF Diversity &amp;amp; Inclusion committee to be &lt;a href=&quot;https://lists.apache.org/thread.html/rfa1673c9f8b42cf286f5fb763eb987eced2bdea1a619358869a49bef%40%3Cdev.cassandra.apache.org%3E&quot;&gt;included in a research project&lt;/a&gt; to evaluate and understand the current state of diversity.&lt;/p&gt;
+
+&lt;h2 id=&quot;user-space&quot;&gt;User Space&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Bigmate&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&quot;In vetting MySQL, MongoDB, and other potential databases for IoT scale, we found they couldn't match the scalability we could get with open source Apache Cassandra. Cassandra's built-for-scale architecture enables us to handle millions of operations or concurrent users each second with ease – making it ideal for IoT deployments.&quot; - &lt;a href=&quot;https://www.iotcentral.io/blog/how-open-source-apache-cassandra-solved-our-iot-scalability-and-r&quot;&gt;Brett Orr&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bloomberg&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&quot;Our group is working on a multi-year build, creating a new Index Construction Platform to handle the daily production of the Bloomberg Barclays fixed income indices. This involves building and productionizing an Apache Solr-backed search platform to handle thousands of searches per minute, an Apache Cassandra back-end database to store millions of data points per day, and a distributed computational engine to handle millions of computations daily.&quot; - &lt;a href=&quot;https://www.techatbloomberg.com/blog/meet-the-team-indices-engineering/&quot;&gt;Noel Gunasekar&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;in-the-news&quot;&gt;In the News&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Solutions Review&lt;/strong&gt; - &lt;a href=&quot;https://solutionsreview.com/data-management/the-five-best-apache-cassandra-books-on-our-reading-list/&quot;&gt;The Five Best Apache Cassandra Books on Our Reading List&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ZDNet&lt;/strong&gt; - &lt;a href=&quot;https://www.zdnet.com/article/what-cassandra-users-think-of-their-nosql-dbms/&quot;&gt;What Cassandra users think of their NoSQL DBMS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Datanami&lt;/strong&gt; - &lt;a href=&quot;https://www.datanami.com/2020/09/22/cassandra-adoption-correlates-with-experience/&quot;&gt;Cassandra Adoption Correlates with Experience&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Container Journal -&lt;/strong&gt; &lt;a href=&quot;https://containerjournal.com/topics/container-management/5-to-1-an-overview-of-apache-cassandra-kubernetes-operators/&quot;&gt;5 to 1: An Overview of Apache Cassandra Kubernetes Operators&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Datanami&lt;/strong&gt; - &lt;a href=&quot;https://www.datanami.com/2020/07/21/cassandra-gets-monitoring-performance-upgrades/&quot;&gt;Cassandra Gets Monitoring, Performance Upgrades&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ZDNet&lt;/strong&gt; - &lt;a href=&quot;https://www.zdnet.com/article/faster-than-ever-apache-cassandra-4-0-beta-is-on-its-way/&quot;&gt;Faster than ever, Apache Cassandra 4.0 beta is on its way&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cassandra-tutorials--more&quot;&gt;Cassandra Tutorials &amp;amp; More&lt;/h2&gt;
+
+&lt;p&gt;A Cassandra user was in search of a tool to perform schema DDL upgrades. Another user suggested &lt;a href=&quot;https://github.com/patka/cassandra-migration&quot;&gt;https://github.com/patka/cassandra-migration&lt;/a&gt; to ensure you don't get schema mismatches if running multiple upgrade statements in one migration. See the &lt;a href=&quot;https://lists.apache.org/thread.html/rdfee145c4c5d920f644c6bcd081c6fb446d52b055c133485217b8143%40%3Cuser.cassandra.apache.org%3E&quot;&gt;full email&lt;/a&gt; on the user mailing list for other recommended tools.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://opensource.com/article/20/10/virtual-tables-apache-cassandra&quot;&gt;Start using virtual tables in Apache Cassandra 4.0&lt;/a&gt; - Ben Bromhead, Instaclustr&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pkolaczk.github.io/benchmarking-cassandra/&quot;&gt;Benchmarking Apache Cassandra with Rust&lt;/a&gt; - Piotr Kołaczkowski, DataStax&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.anant.us/open-source-bi-tools-and-cassandra/&quot;&gt;Open Source BI Tools and Cassandra&lt;/a&gt; - Arpan Patel, Anant Corporation&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dzone.com/articles/build-fault-tolerant-applications-with-cassandra-a&quot;&gt;Build Fault Tolerant Applications With Cassandra API for Azure Cosmos DB&lt;/a&gt; - Abhishek Gupta, Microsoft&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.red-gate.com/simple-talk/blogs/understanding-data-modifications-in-cassandra/&quot;&gt;Understanding Data Modifications in Cassandra&lt;/a&gt; - Sameer Shukla, Redgate&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/changelog_footer.jpg&quot; alt=&quot;Cassandra Changelog footer&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cassandra Changelog is curated by the community. Please send submissions to &lt;a href=&quot;mailto:cassandra@constantia.io&quot;&gt;cassandra@constantia.io&lt;/a&gt;.&lt;/p&gt;</content><author><name>the Apache Cassandra Community</name></author><summary type="html">Introducing the first Cassandra Changelog blog! Our monthly roundup of key activities and knowledge to keep the community informed.</summary></entry><entry><title type="html">Apache Cassandra Usage Report 2020</title><link href="http://cassandra.apache.org/blog/2020/09/17/cassandra-usage-report-2020.html" rel="alternate" type="text/html" title="Apache Cassandra Usage Report 2020" /><published>2020-09-17T09:00:00+00:00</published><updated>2020-09-17T09:00:00+00:00</updated><id>http://cassandra.apache.org/blog/2020/09/17/cassandra-usage-report-2020</id><content type="html" xml:base="http://cassandra.apache.org/blog/2020/09/17/cassandra-usage-report-2020.html">&lt;p&gt;Apache Cassandra is the open source NoSQL database for mission critical data. Today the community announced findings from a comprehensive global survey of 901 practitioners on Cassandra usage. It’s the first of what will become an annual survey that provides a baseline understanding of who, how, and why organizations use Cassandra.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“I saw zero downtime at global scale with Apache Cassandra. That’s a powerful statement to make. For our business that’s quite crucial.” - Practitioner, London&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;key-themes&quot;&gt;Key Themes&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Cassandra adoption is correlated with organizations in a more advanced stage of digital transformation.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;People from organizations that self-identified as being in a “highly advanced” stage of digital transformation were more likely to be using Cassandra (26%) compared with those in an “advanced” stage (10%) or “in process” (5%).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Optionality, security, and scalability are among the key reasons Cassandra is selected by practitioners.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The top reasons practitioners use Cassandra for mission critical apps are “good hybrid solutions” (62%), “very secure” (60%), “highly scalable” (57%), “fast” (57%), and “easy to build apps with” (55%).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A lack of skilled staff and the challenge of migration deters adoption of Cassandra.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Thirty-six percent of practitioners currently using Cassandra for mission critical apps say that a lack of Cassandra-skilled team members may deter adoption. When asked what it would take for practitioners to use Cassandra for more applications and features in production, they said “easier to migrate” and “easier to integrate.”&lt;/p&gt;
+
+&lt;h3 id=&quot;methodology&quot;&gt;Methodology&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample.&lt;/strong&gt; The survey consisted of 1,404 interviews of IT professionals and executives, including 901 practitioners which is the focus of this usage report, from April 13-23, 2020. Respondents came from 13 geographies (China, India, Japan, South Korea, Germany, United Kingdom, France, the Netherlands, Ireland, Brazil, Mexico, Argentina, and the U.S.) and the survey was offered in seven languages corresponding to those geographies. While margin of sampling error cannot technically be calculated for online panel populations where the relationship between sample and universe is unknown, the margin of sampling error for equivalent representative samples would be +/- 2.6% for the total sample, +/- 3.3% for the practitioner sample, and +/- 4.4% for the executive sample.&lt;/p&gt;
+
+&lt;p&gt;To ensure the highest quality respondents, surveys include enhanced screening beyond title and activities of company size (no companies under 100 employees), cloud IT knowledge, and years of IT experience.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rounding and multi-response.&lt;/strong&gt; Figures may not add to 100 due to rounding or multi-response questions.&lt;/p&gt;
+
+&lt;h3 id=&quot;demographics&quot;&gt;Demographics&lt;/h3&gt;
+
+&lt;p&gt;Practitioner respondents represent a variety of roles as follows: Dev/DevOps (52%), Ops/Architect (29%), Data Scientists and Engineers (11%), and Database Administrators (8%) in the Americas (43%), Europe (32%), and Asia Pacific (12%).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-usage-report-2020/image1.jpg&quot; alt=&quot;Cassandra roles&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Respondents include both enterprise (65% from companies with 1k+ employees) and SMEs (35% from companies with at least 100 employees). Industries include IT (45%), financial services (11%), manufacturing (8%), health care (4%), retail (3%), government (5%), education (4%), telco (3%), and 17% were listed as “other.”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-usage-report-2020/image2.jpg&quot; alt=&quot;Cassandra companies&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cassandra-adoption&quot;&gt;Cassandra Adoption&lt;/h3&gt;
+
+&lt;p&gt;Twenty-two percent of practitioners are currently using or evaluating Cassandra with an additional 11% planning to use it in the next 12 months.&lt;/p&gt;
+
+&lt;p&gt;Of those currently using Cassandra, 89% are using open source Cassandra, including both self-managed (72%) and third-party managed (48%).&lt;/p&gt;
+
+&lt;p&gt;Practitioners using Cassandra today are more likely to use it for more projects tomorrow. Overall, 15% of practitioners say they are extremely likely (10 on a 10-pt scale) to use it for their next project. Of those, 71% are currently using or have used it before.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-usage-report-2020/image3.jpg&quot; alt=&quot;Cassandra adoption&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cassandra-usage&quot;&gt;Cassandra Usage&lt;/h3&gt;
+
+&lt;p&gt;People from organizations that self-identified as being in a “highly advanced” stage of digital transformation were more likely to be using Cassandra (26%) compared with those in an “advanced” stage (10%) in “in process” (5%).&lt;/p&gt;
+
+&lt;p&gt;Cassandra predominates in very important or mission critical apps. Among practitioners, 31% use Cassandra for their mission critical applications, 55% for their very important applications, 38% for their somewhat important applications, and 20% for their least important applications.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“We’re scheduling 100s of millions of messages to be sent. Per day. If it’s two weeks, we’re talking about a couple billion. So for this, we use Cassandra.” - Practitioner, Amsterdam&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-usage-report-2020/image4.jpg&quot; alt=&quot;Cassandra usage&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;why-cassandra&quot;&gt;Why Cassandra?&lt;/h3&gt;
+
+&lt;p&gt;The top reasons practitioners use Cassandra for mission critical apps are “good hybrid solutions” (62%), “very secure” (60%), “highly scalable” (57%), “fast” (57%), and “easy to build apps with” (55%).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“High traffic, high data environments where really you’re just looking for very simplistic key value persistence of your data. It’s going to be a great fit for you, I can promise that.” - Global SVP Engineering&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-usage-report-2020/image5.jpg&quot; alt=&quot;Top reasons practitioners use Cassandra&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For companies in a highly advanced stage of digital transformation, 58% cite “won’t lose data” as the top reason, followed by “gives me confidence” (56%), “cloud native” (56%), and “very secure” (56%).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“It can’t lose anything, it has to be able to capture everything. It can’t have any security defects. It needs to be somewhat compatible with the environment. If we adopt a new database, it can’t be a duplicate of the data we already have.… So: Cassandra.” - Practitioner, San Francisco&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;However, 36% of practitioners currently using Cassandra for mission critical apps say that a lack of Cassandra-skilled team members may deter adoption.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“We don’t have time to train a ton of developers, so that time to deploy, time to onboard, that’s really key. All the other stuff, scalability, that all sounds fine.” – Practitioner, London&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When asked what it would take for practitioners to use Cassandra for more applications and features in production, they said “easier to migrate” and “easier to integrate.”&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“If I can get started and be productive in 30 minutes, it’s a no brainer.” - Practitioner, London&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;We invite anyone who is curious about Cassandra to test the &lt;a href=&quot;https://cassandra.apache.org/blog/2020/07/20/apache-cassandra-4-0-beta1.html&quot;&gt;4.0 beta release&lt;/a&gt;. There will be no new features or breaking API changes in future Beta or GA builds, so you can expect the time you put into the beta to translate into transitioning your production workloads to 4.0.&lt;/p&gt;
+
+&lt;p&gt;We also invite you to participate in a short survey about &lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLScdoTCMxsDwRzt-U898fVmeksBlAf5fud2GVsGqC0T_IQz2Tg/viewform?usp=sf_link&quot;&gt;Kubernetes and Cassandra&lt;/a&gt; that is open through September 24, 2020. Details will be shared with the Cassandra Kubernetes SIG after it closes.&lt;/p&gt;
+
+&lt;h3 id=&quot;survey-credits&quot;&gt;Survey Credits&lt;/h3&gt;
+
+&lt;p&gt;A volunteer from the community helped analyze the report, which was conducted by ClearPath Strategies, a strategic consulting and research firm, and donated to the community by DataStax. It is available for use under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).&lt;/p&gt;</content><author><name>the Apache Cassandra Community</name></author><summary type="html">Apache Cassandra is the open source NoSQL database for mission critical data. Today the community announced findings from a comprehensive global survey of 901 practitioners on Cassandra usage. It’s the first of what will become an annual survey that provides a baseline understanding of who, how, and why organizations use Cassandra.</summary></entry><entry><title type="html">Improving Apache Cassandra’s Front Door and Backpressure</title><link href="http://cassandra.apache.org/blog/2020/09/03/improving-resiliency.html" rel="alternate" type="text/html" title="Improving Apache Cassandra’s Front Door and Backpressure" /><published>2020-09-03T09:00:00+00:00</published><updated>2020-09-03T09:00:00+00:00</updated><id>http://cassandra.apache.org/blog/2020/09/03/improving-resiliency</id><content type="html" xml:base="http://cassandra.apache.org/blog/2020/09/03/improving-resiliency.html">&lt;p&gt;As part of &lt;a href=&quot;https://issues.apache.org/jira/browse/CASSANDRA-15013&quot;&gt;CASSANDRA-15013&lt;/a&gt;, we have improved Cassandra’s ability to handle high throughput workloads, while having enough safeguards in place to protect itself from potentially going out of memory. In order to better explain the change we have made, let us understand at a high level, on how an incoming request is processed by Cassandra before the fix, followed by what we changed, and the new relevant configuration knobs available.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-inbound-requests-were-handled-before&quot;&gt;How inbound requests were handled before&lt;/h3&gt;
+
+&lt;p&gt;Let us take the scenario of a client application sending requests to C* cluster. For the purpose of this blog, let us focus on one of the C* coordinator nodes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image1.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Below is the microscopic view of client-server interaction at the C* coordinator node. Each client connection to Cassandra node happens over a netty channel, and for efficiency purposes, each Netty eventloop thread is responsible for more than one netty channel.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image2.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The eventloop threads read requests coming off of netty channels and enqueue them into a bounded inbound queue in the Cassandra node.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image3.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A thread pool dequeues requests from the inbound queue, processes them asynchronously and enqueues the response into an outbound queue. There exist multiple outbound queues, one for each eventloop thread to avoid races.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image4.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image5.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image6.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The same eventloop threads that are responsible for enqueuing incoming requests into the inbound queue, are also responsible for dequeuing responses off from the outbound queue and shipping responses back to the client.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image7.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image8.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;issue-with-this-workflow&quot;&gt;Issue with this workflow&lt;/h4&gt;
+
+&lt;p&gt;Let us take a scenario where there is a spike in operations from the client. The eventloop threads are now enqueuing requests at a much higher rate than the rate at which the requests are being processed by the native transport thread pool. Eventually, the inbound queue reaches its limit and says it cannot store any more requests in the queue.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image9.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Consequently, the eventloop threads get into a blocked state as they try to enqueue more requests into an already full inbound queue. They wait until they can successfully enqueue the request in hand, into the queue.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image10.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As noted earlier, these blocked eventloop threads are also supposed to dequeue responses from the outbound queue. Given they are in blocked state, the outbound queue (which is unbounded) grows endlessly, with all the responses, eventually resulting in C*  going out of memory. This is a vicious cycle because, since the eventloop threads are blocked, there is no one to ship responses back to the client; eventually client side timeout triggers, and clients may send more requests due to retries. This is an unfortunate situation to be in, since Cassandra is doing all the work of processing these requests as fast as it can, but there is no one to ship the produced responses back to the client.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image11.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So far, we have built a fair understanding of how the front door of C* works with regard to handling client requests, and how blocked eventloop threads can affect Cassandra.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-we-changed&quot;&gt;What we changed&lt;/h3&gt;
+
+&lt;h4 id=&quot;backpressure&quot;&gt;Backpressure&lt;/h4&gt;
+
+&lt;p&gt;The essential root cause of the issue is that eventloop threads are getting blocked. Let us not block them by making the bounded inbound queue unbounded. If we are not careful here though, we could have an out of memory situation, this time because of the unbounded inbound queue. So we defined an overloaded state for the node based on the memory usage of the inbound queue.&lt;/p&gt;
+
+&lt;p&gt;We introduced two levels of thresholds, one at the node level, and the other more granular, at client IP. The one at client IP helps to isolate rogue client IPs, while not affecting other good clients, if there is such a situation.&lt;/p&gt;
+
+&lt;p&gt;These thresholds can be set using cassandra yaml file.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;native_transport_max_concurrent_requests_in_bytes_per_ip
+native_transport_max_concurrent_requests_in_bytes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;These thresholds can be further changed at runtime (&lt;a href=&quot;https://issues.apache.org/jira/browse/CASSANDRA-15519&quot;&gt;CASSANDRA-15519&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h4 id=&quot;configurable-server-response-to-the-client-as-part-of-backpressure&quot;&gt;Configurable server response to the client as part of backpressure&lt;/h4&gt;
+
+&lt;p&gt;If C* happens to be in overloaded state (as defined by the thresholds mentioned above), C* can react in one of the following ways:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Apply backpressure by setting “Autoread” to false on the netty channel in question (default behavior).&lt;/li&gt;
+  &lt;li&gt;Respond back to the client with Overloaded Exception (if client sets “THROW_ON_OVERLOAD” connection startup option to “true.”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let us look at the client request-response workflow again, in both these cases.&lt;/p&gt;
+
+&lt;h4 id=&quot;throw_on_overload--false-default&quot;&gt;&lt;strong&gt;THROW_ON_OVERLOAD = false (default)&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;If the inbound queue is full (i.e. the thresholds are met).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image12.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;C* sets autoread to false on the netty channel, which means it will stop reading bytes off of the netty channel.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image13.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Consequently, the kernel socket inbound buffer becomes full since no bytes are being read off of it by netty eventloop.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image14.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once the Kernel Socket Inbound Buffer is full on the server side, things start getting piled up in the Kernel Socket Outbound Buffer on the client side, and once this buffer gets full, client will start experiencing backpressure.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image15.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;throw_on_overload--true&quot;&gt;&lt;strong&gt;THROW_ON_OVERLOAD = true&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;If the inbound queue is full (i.e. the thresholds are met), eventloop threads do not enqueue the request into the Inbound Queue. Instead, the eventloop thread creates an OverloadedException response message and enqueues it into the flusher queue, which will then be shipped back to the client.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-improving-resiliency/image16.png&quot; alt=&quot;alt_text&quot; title=&quot;image_tooltip&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This way, Cassandra is able to serve very large throughput, while protecting itself from getting into memory starvation issues. This patch has been vetted through thorough performance benchmarking. Detailed performance analysis can be found &lt;a href=&quot;https://issues.apache.org/jira/browse/CASSANDRA-15013?focusedCommentId=16881762&amp;amp;page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-16881762&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>the Apache Cassandra Community</name></author><summary type="html">As part of CASSANDRA-15013, we have improved Cassandra’s ability to handle high throughput workloads, while having enough safeguards in place to protect itself from potentially going out of memory. In order to better explain the change we have made, let us understand at a high level, on how an incoming request is processed by Cassandra before the fix, followed by what we changed, and the new relevant configuration knobs available.</summary></entry><entry><title type="html">Cassandra and Kubernetes: SIG Update and Survey</title><link href="http://cassandra.apache.org/blog/2020/08/14/cassandra-and-kubernetes-sig-update.html" rel="alternate" type="text/html" title="Cassandra and Kubernetes: SIG Update and Survey" /><published>2020-08-14T03:00:00+00:00</published><updated>2020-08-14T03:00:00+00:00</updated><id>http://cassandra.apache.org/blog/2020/08/14/cassandra-and-kubernetes-sig-update</id><content type="html" xml:base="http://cassandra.apache.org/blog/2020/08/14/cassandra-and-kubernetes-sig-update.html">&lt;p&gt;Five operators for Apache Cassandra have been created that have made it easier to run containerized Cassandra on Kubernetes. Recently the major contributors to these operators came together to discuss the creation of a community-based operator with the intent of making one that makes it easy to run C* on K8s. One of the project’s organizational goals is that the end result will eventually become part of the Apache Software Foundation or the Apache Cassandra project.&lt;/p&gt;
+
+&lt;p&gt;The community created a special interest group (SIG) to set goals for what the operator should do at different levels to find a path for creating a standard community-based operator. The Operator Framework suggests five maturity levels for &lt;a href=&quot;https://operatorframework.io/operator-capabilities/&quot;&gt;operator capabilities&lt;/a&gt; starting from basic installation to auto-pilot.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-cassandra-and-kubernetes-sig-update/operator-capabilities.png&quot; alt=&quot;Operator Capability Maturity Levels&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Source: &lt;a href=&quot;https://operatorframework.io/operator-capabilities/&quot;&gt;OperatorFramework.io&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;The five Cassandra Kubernetes operators all come from different backgrounds, so the first major goal is to develop a common understanding as to what an operator needs to do and at which level. This first step involves collaborating on a Custom Resource Definition (CRD) that will set the syntax / schema which will be used to create Cassandra clusters on Kubernetes. Once this is done, a software extension can be developed in a variety of languages including Go, Java, or using the Operator SDK in Helm or Ansible &lt;a href=&quot;https://kubernetes.io/docs/concepts/extend-kubernetes/operator/&quot;&gt;without making changes to Kubernetes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We’re not starting from zero, as the creators of the five operators are actively participating in the SIG. Hopefully much of the decided upon CRD will have code fragments that can be leveraged from the other projects. The &lt;a href=&quot;https://github.com/Anant/awesome-cassandra/blob/master/README.md#deploying-cassandra-on-kubernetes--kubernetized-cassandra&quot;&gt;major operators out publicly today&lt;/a&gt; are those by Sky UK, Orange Telecom, Instaclustr, Elassandra, and DataStax (list sourced from the &lt;a href=&quot;https://github.com/Anant/awesome-cassandra/blob/master/README.md&quot;&gt;awesome-cassandra&lt;/a&gt; project):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Orange-OpenSource/cassandra-k8s-operator&quot;&gt;CassKop - Cassandra Kubernetes Operator&lt;/a&gt; - This Kubernetes operator by Orange automates Cassandra operations such as deploying a new rack aware cluster, adding/removing nodes, configuring the C and JVM parameters, upgrading JVM and C versions. Written in Go. This one was also one of the first ones out and is the only one that can support multiple Kubernetes clusters using &lt;a href=&quot;https://orange-opensource.github.io/casskop/docs/2_setup/3_multi_casskop&quot;&gt;Multi-CassKop&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sky-uk/cassandra-operator&quot;&gt;Cassandra Operator&lt;/a&gt; - A Kubernetes operator by SkyUK that manages Cassandra clusters inside Kubernetes. Well designed and organized. This was among the first operators to be released.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/instaclustr/cassandra-operator&quot;&gt;Instaclustr - Kubernetes Operator for Cassandra operator&lt;/a&gt; - The Cassandra operator by Instaclustr manages Cassandra clusters deployed to Kubernetes and automates tasks related to operating an Cassandra cluster.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/datastax/cass-operator&quot;&gt;Cass Operator&lt;/a&gt; - DataStax’s Kubernetes Operator supports Apache Cassandra as well as DSE containers on Kubernetes. Cassandra configuration is managed directly in the CRD, and Cassandra nodes are managed via a RESTful management API.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/strapdata/elassandra-operator&quot;&gt;Elassandra Operator&lt;/a&gt; - The Elassandra Kubernetes Operator automates the deployment and management of Elassandra clusters deployed in multiple Kubernetes clusters.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you’re interested in catching up on what the SIG has been talking about, you can watch the YouTube videos of the sessions and read up on the working documents:&lt;/p&gt;
+
+&lt;p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ODz9eEdspXE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/p&gt;
+
+&lt;p&gt;As with any Kubernetes operator, the goal is to create a robot which takes the manual work of setting up complex configurations of containers in Kubernetes easier. An operator can also be seen as a translator between the logical concepts of the software and the concrete Kubernetes resources such as nodes, pods, services. Combined with controllers, operators can abstract out operations such that the human operators can focus on problems related to their industry or domain.  As mentioned above, the different operator capability levels offer a roadmap to creating a robust operator for Cassandra users that is easy to use, set up, maintain and upgrade, and expand a cluster.&lt;/p&gt;
+
+&lt;p&gt;When a platform needs Cassandra, it’s probably exhausted the other potential datastores available because it needs high availability and fault tolerance, at high speeds, around the world. Kubernetes is a technology that can match well with Cassandra’s capabilities because it shares the features of being linearly scalable, vendor neutral, and cloud agnostic. There is a healthy debate about whether Cassandra belongs in Kubernetes — &lt;a href=&quot;https://cloud.google.com/blog/products/databases/to-run-or-not-to-run-a-database-on-kubernetes-what-to-consider&quot;&gt;and whether databases belong in Kubernetes at all&lt;/a&gt; — because other orchestration tools are good enough, though the growing user base of Kubernetes in hobby and commercial realms suggests that we need to provide an operator that can keep up with the demand.&lt;/p&gt;
+
+&lt;p&gt;Most likely if someone is thinking about moving Cassandra workloads from public cloud, on-premises VMs, or even on-premises bare metal servers to either a public or private cloud hosted K8s, they’ll want to evaluate whether or not the existing architecture could run and be performant.&lt;/p&gt;
+
+&lt;p&gt;As part of the SIG, we’re also coming up with reference architectures on which to test the operator. Here are some of the common and most basic reference architectures that are likely candidates.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Single Workload in Single Region&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;1 DCs in 1 region, with 3 nodes (3 total)&lt;/li&gt;
+      &lt;li&gt;DC expands to 6 (6 total)&lt;/li&gt;
+      &lt;li&gt;DC contracts to 3 ( 3 total)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-cassandra-and-kubernetes-sig-update/single-region-single-datacenter.png&quot; alt=&quot;Single Workload / Datacenter in a Single Region&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Multi-Workload in Single Region&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;2 DCs, both in the same region, with 3 nodes in each DC (6 total)&lt;/li&gt;
+      &lt;li&gt;Both DCs expand to 6 each (12 total)&lt;/li&gt;
+      &lt;li&gt;Both DCs contract to 3 each ( 6 total)&lt;/li&gt;
+      &lt;li&gt;Add a third DC in the same region with 3 nodes (9 nodes)&lt;/li&gt;
+      &lt;li&gt;Remove third DC&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-cassandra-and-kubernetes-sig-update/single-region-multi-datacenter.png&quot; alt=&quot;Multiple Workloads / Datacenters in a Single Region&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Single Workload in Multi-Regions&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;2 DCs, 1 in each region, with 3 nodes in each DC (6 total)&lt;/li&gt;
+      &lt;li&gt;Both DCs expand to 6 each (12 total)&lt;/li&gt;
+      &lt;li&gt;Both DCs contract to 3 each ( 6 total)&lt;/li&gt;
+      &lt;li&gt;Add a third DC in a 3rd region with 3 nodes (9 total)&lt;/li&gt;
+      &lt;li&gt;Remove third DC&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Although each organization is different, these scenarios or combinations of these scenarios account for 80% of most pure Apache Cassandra use cases. The SIG would love to know more about Cassandra users’ use cases for Kubernetes. Please take &lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLScdoTCMxsDwRzt-U898fVmeksBlAf5fud2GVsGqC0T_IQz2Tg/viewform&quot;&gt;this short survey&lt;/a&gt;, which will remain open through September 17, 2020.&lt;/p&gt;
+
+&lt;p&gt;Join the &lt;a href=&quot;https://cwiki.apache.org/confluence/display/CASSANDRA/Cassandra+Kubernetes+Operator+SIG&quot;&gt;biweekly meetings&lt;/a&gt; to stay informed.&lt;/p&gt;</content><author><name>the Apache Cassandra Community</name></author><summary type="html">Five operators for Apache Cassandra have been created that have made it easier to run containerized Cassandra on Kubernetes. Recently the major contributors to these operators came together to discuss the creation of a community-based operator with the intent of making one that makes it easy to run C* on K8s. One of the project’s organizational goals is that the end result will eventually become part of the Apache Software Foundation or the Apache Cassandra project.</summary></entry><entry><title type="html">Introducing Apache Cassandra 4.0 Beta: Battle Tested From Day One</title><link href="http://cassandra.apache.org/blog/2020/07/20/apache-cassandra-4-0-beta1.html" rel="alternate" type="text/html" title="Introducing Apache Cassandra 4.0 Beta: Battle Tested From Day One" /><published>2020-07-20T21:00:00+00:00</published><updated>2020-07-20T21:00:00+00:00</updated><id>http://cassandra.apache.org/blog/2020/07/20/apache-cassandra-4-0-beta1</id><content type="html" xml:base="http://cassandra.apache.org/blog/2020/07/20/apache-cassandra-4-0-beta1.html">&lt;p&gt;This is the most &lt;strong&gt;stable&lt;/strong&gt; Apache Cassandra in history; you should start using Apache Cassandra 4.0 Beta today in your test and QA environments, head to the &lt;a href=&quot;https://cassandra.apache.org/download/&quot;&gt;downloads site&lt;/a&gt; to get your hands on it. The Cassandra community is on a mission to deliver a 4.0 GA release that is ready to be deployed to production. You can guarantee this holds true by running your application workloads against the Beta release and contributing to the community’s validation effort to get Cassandra 4.0 to GA.&lt;/p&gt;
+
+&lt;p&gt;With over 1,000 bug fixes, improvements and new features and the project’s wholehearted &lt;a href=&quot;https://cassandra.apache.org/blog/2018/08/21/testing_apache_cassandra.html&quot;&gt;focus on quality&lt;/a&gt; with &lt;a href=&quot;https://cassandra.apache.org/blog/2018/10/17/finding_bugs_with_property_based_testing.html&quot;&gt;replay, fuzz, property-based, fault-injection&lt;/a&gt;, and performance tests on clusters as large as 1,000 nodes and with hundreds of real world use cases and schemas tested, Cassandra 4.0 redefines what users should expect from any open or closed source database. With software, hardware, and QA testing donations from the likes of Instaclustr, iland, Amazon, and Datastax, this release has seen an unprecedented cross-industry collaboration towards releasing a battle-tested database with enterprise security features and an understanding of what it takes to deliver scale in the cloud.&lt;/p&gt;
+
+&lt;p&gt;There will be no new features or breaking API changes in future Beta or GA builds. You can expect the time you put into the beta to translate into transitioning your production workloads to 4.0 in the near future.&lt;/p&gt;
+
+&lt;p&gt;Quality in distributed infrastructure software takes time and this release is no exception. Open source projects are only as strong as the community of people that build and use them, so your feedback is a critical part of making this the best release in project history; share your thoughts on the &lt;a href=&quot;https://cassandra.apache.org/community/&quot;&gt;user or dev mailing lists&lt;/a&gt; or in the &lt;a href=&quot;https://cassandra.apache.org/community/&quot;&gt;#cassandra ASF slack channel&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;redefining-the-elasticity-you-should-expect-from-your-distributed-systems-with-zero-copy-streaming&quot;&gt;&lt;strong&gt;Redefining the elasticity you should expect from your distributed systems with Zero Copy Streaming&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;5x faster scaling operations&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Cassandra streams data between nodes during scaling operations such as adding a new node or datacenter during peak traffic times. Thanks to the new Zero Copy Streaming functionality in 4.0, this critical operation is now up to &lt;a href=&quot;https://cassandra.apache.org/blog/2019/04/09/benchmarking_streaming.html&quot;&gt;5x faster&lt;/a&gt; without vnodes compared to previous versions, which means a more elastic architecture particularly in cloud and Kubernetes environments.&lt;/p&gt;
+
+&lt;p&gt;Globally distributed systems have unique consistency caveats and Cassandra keeps the data replicas in sync through a process called repair. Many of the fundamentals of the algorithm for incremental repair were rewritten to harden and &lt;a href=&quot;https://thelastpickle.com/blog/2018/09/10/incremental-repair-improvements-in-cassandra-4.html&quot;&gt;optimize incremental repair&lt;/a&gt; for a faster and less resource intensive operation to maintain consistency across data replicas.&lt;/p&gt;
+
+&lt;h4 id=&quot;giving-you-visibility-and-control-over-whats-happening-in-your-cluster-with-real-time-audit-logging-and-traffic-replay&quot;&gt;&lt;strong&gt;Giving you visibility and control over what’s happening in your cluster with real time Audit Logging and Traffic Replay&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Enterprise-grade security &amp;amp; observability&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To ensure regulatory and security compliance with SOX, PCI or GDPR, it’s critical to understand who is accessing data and when they are accessing it. Cassandra 4.0 delivers a long awaited &lt;a href=&quot;https://cassandra.apache.org/blog/2018/10/29/audit_logging_cassandra.html&quot;&gt;audit logging feature&lt;/a&gt; for operators to track the DML, DDL, and DCL activity with minimal impact to normal workload performance. Built on the same underlying implementation, there is also a new &lt;a href=&quot;https://cassandra.apache.org/doc/latest/new/fqllogging.html&quot;&gt;fqltool&lt;/a&gt; that allows the capture and replay of production workloads for analysis.&lt;/p&gt;
+
+&lt;p&gt;There are &lt;a href=&quot;https://thelastpickle.com/blog/2018/05/08/cassandra-4.0-datacentre-security-improvements.html&quot;&gt;new controls&lt;/a&gt; to enable use cases that require data access on a per data center basis. For example, if you have a data center in the United States and a data center in Europe, you can now configure a Cassandra role to only have access to a single data center using the new CassandraNetworkAuthorizer.&lt;/p&gt;
+
+&lt;p&gt;For years, the primary way to observe Cassandra clusters has been through JMX and open source tools such as Instaclustr’s &lt;a href=&quot;https://github.com/instaclustr/cassandra-exporter&quot;&gt;Cassandra Exporter&lt;/a&gt; and DataStax’s &lt;a href=&quot;https://github.com/datastax/metric-collector-for-apache-cassandra&quot;&gt;Metrics Collector&lt;/a&gt;. In this most recent version of Cassandra you can selectively expose system metrics or configuration settings via &lt;a href=&quot;https://thelastpickle.com/blog/2019/03/08/virtual-tables-in-cassandra-4_0.html&quot;&gt;Virtual Tables&lt;/a&gt; that are consumed like any other Cassandra table. This delivers flexibility for operators to ensure that they have the signals in place to keep their deployments healthy.&lt;/p&gt;
+
+&lt;h4 id=&quot;looking-to-the-future-with-java-11-support-and-zgc&quot;&gt;&lt;strong&gt;Looking to the future with Java 11 support and ZGC&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;One of the most exciting features of Java 11 is the new &lt;a href=&quot;https://thelastpickle.com/blog/2018/08/16/java11.html&quot;&gt;Z Garbage Collector (ZGC)&lt;/a&gt; that aims to reduce GC pause times to a max of a few milliseconds with no latency degradation as heap sizes increase. This feature is still experimental and thorough testing should be performed before deploying to production. These improvements significantly improve the node availability profiles from garbage collection on a cluster which is why this feature has been included as experimental in the Cassandra 4.0 release.&lt;/p&gt;
+
+&lt;h4 id=&quot;part-of-a-vibrant-and-healthy-ecosystem&quot;&gt;&lt;strong&gt;Part of a vibrant and healthy ecosystem&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;The third-party ecosystem has their eyes on this release and a number of utilities have already added support for Cassandra 4.0. These include the client driver libraries, Spring Boot and Spring Data, Quarkus, the DataStax Kafka Connector and Bulk Loader, The Last Pickle’s Cassandra Reaper tool for managing repairs, Medusa for handling backup and restore, the Spark Cassandra Connector, The Definitive Guide for Apache Cassandra, and the list goes on.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Get started today&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There’s no doubt that open source drives innovation and the Cassandra 4.0 Beta exemplifies the value in a community of contributors that run Cassandra in some of the largest deployments in the world.&lt;/p&gt;
+
+&lt;p&gt;To put it in perspective, if you use a website or a smartphone today, you’re probably touching a Cassandra-backed system.&lt;/p&gt;
+
+&lt;p&gt;To download the Beta, head to the &lt;a href=&quot;https://cassandra.apache.org/download/&quot;&gt;Apache Cassandra downloads site&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Resources:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Apache Cassandra Blog: &lt;a href=&quot;https://cassandra.apache.org/blog/2019/04/09/benchmarking_streaming.html&quot;&gt;Even Higher Availability with 5x Faster Streaming in Cassandra 4.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Last Pickle Blog: &lt;a href=&quot;https://thelastpickle.com/blog/2018/09/10/incremental-repair-improvements-in-cassandra-4.html&quot;&gt;Incremental Repair Improvements in Cassandra 4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Apache Cassandra Blog: &lt;a href=&quot;https://cassandra.apache.org/blog/2018/10/29/audit_logging_cassandra.html&quot;&gt;Audit Logging in Apache Cassandra 4.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Last Pickle Blog: &lt;a href=&quot;https://thelastpickle.com/blog/2018/05/08/cassandra-4.0-datacentre-security-improvements.html&quot;&gt;Cassandra 4.0 Data Center Security Enhancements&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Last Pickle Blog: &lt;a href=&quot;https://thelastpickle.com/blog/2019/03/08/virtual-tables-in-cassandra-4_0.html&quot;&gt;Virtual tables are coming in Cassandra 4.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Last Pickle Blog: &lt;a href=&quot;https://thelastpickle.com/blog/2018/08/16/java11.html&quot;&gt;Java 11 Support in Apache Cassandra 4.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-apache-cassandra-4-0-beta1/apache-cassandra-infographic-final.jpg&quot; alt=&quot;Apache Cassandra Infographic&quot; title=&quot;Apache Cassandra Infographic&quot; /&gt;&lt;/p&gt;</content><author><name>The Apache Cassandra Community</name></author><summary type="html">This is the most stable Apache Cassandra in history; you should start using Apache Cassandra 4.0 Beta today in your test and QA environments, head to the downloads site to get your hands on it. The Cassandra community is on a mission to deliver a 4.0 GA release that is ready to be deployed to production. You can guarantee this holds true by running your application workloads against the Beta release and contributing to the community’s validation effort to get Cassandra 4.0 to GA.</summary></entry><entry><title type="html">Even Higher Availability with 5x Faster Streaming in Cassandra 4.0</title><link href="http://cassandra.apache.org/blog/2019/04/09/benchmarking_streaming.html" rel="alternate" type="text/html" title="Even Higher Availability with 5x Faster Streaming in Cassandra 4.0" /><published>2019-04-09T08:00:00+00:00</published><updated>2019-04-09T08:00:00+00:00</updated><id>http://cassandra.apache.org/blog/2019/04/09/benchmarking_streaming</id><content type="html" xml:base="http://cassandra.apache.org/blog/2019/04/09/benchmarking_streaming.html">&lt;p&gt;Streaming is a process where nodes of a cluster exchange data in the form of SSTables. Streaming can kick in during many situations such as bootstrap, repair, rebuild, range movement, cluster expansion, etc. In this post, we discuss the massive performance improvements made to the streaming process in Apache Cassandra 4.0.&lt;/p&gt;
+
+&lt;h2 id=&quot;high-availability&quot;&gt;High Availability&lt;/h2&gt;
+&lt;p&gt;As we know Cassandra is a Highly Available, Eventually Consistent database. The way it maintains its legendary availability is by storing redundant copies of data in nodes known as replicas, usually running on commodity hardware. During normal operations, these replicas may end up having hardware issues causing them to fail. As a result, we need to replace them with new nodes on fresh hardware.&lt;/p&gt;
+
+&lt;p&gt;As part of this replacement operation, the new Cassandra node streams data from the neighboring nodes that hold copies of the data belonging to this new node’s token range. Depending on the amount of data stored, this process can require substantial network bandwidth, taking some time to complete. The longer these types of operations take, the more we are exposing ourselves to loss of availability. Depending on your replication factor and consistency requirements, if another node fails during this replacement operation, ability will be impacted.&lt;/p&gt;
+
+&lt;h2 id=&quot;increasing-availability&quot;&gt;Increasing Availability&lt;/h2&gt;
+&lt;p&gt;To minimize the failure window, we want to make these operations as fast as possible. The faster the new node completes streaming its data, the faster it can serve traffic, increasing the availability of the cluster. Towards this goal, Cassandra 4.0 saw the addition of &lt;a href=&quot;https://en.wikipedia.org/wiki/Zero-copy&quot;&gt;Zero Copy&lt;/a&gt; streaming. For more details on Cassandra’s zero copy implementation, see this &lt;a href=&quot;../../../2018/08/07/faster_streaming_in_cassandra.html&quot;&gt;blog post&lt;/a&gt; and &lt;a href=&quot;https://issues.apache.org/jira/browse/CASSANDRA-14556&quot;&gt;CASSANDRA-14556&lt;/a&gt; for more information.&lt;/p&gt;
+
+&lt;h2 id=&quot;talking-numbers&quot;&gt;Talking Numbers&lt;/h2&gt;
+&lt;p&gt;To quantify the results of these improvements, we, at Netflix, measured the performance impact of streaming in 4.0 vs 3.0, using our open source &lt;a href=&quot;https://github.com/Netflix/ndbench&quot;&gt;NDBench&lt;/a&gt; benchmarking tool with the CassJavaDriverGeneric plugin. Though we knew there would be improvements, we were still amazed with the overall results of a &lt;strong&gt;five fold increase&lt;/strong&gt; in streaming performance. The test setup and operations are all detailed below.&lt;/p&gt;
+
+&lt;h3 id=&quot;test-setup&quot;&gt;Test Setup&lt;/h3&gt;
+&lt;p&gt;In our test setup, we used the following configurations:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;6-node clusters on i3.xl, i3.2xl, i3.4xl and i3.8xl EC2 instances, each on 3.0 and trunk (sha dd7ec5a2d6736b26d3c5f137388f2d0028df7a03).&lt;/li&gt;
+  &lt;li&gt;Table schema&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;pre&gt;
+CREATE TABLE testing.test (
+    key text,
+    column1 int,
+    value text,
+    PRIMARY KEY (key, column1)
+) WITH CLUSTERING ORDER BY (column1 ASC)
+    AND bloom_filter_fp_chance = 0.01
+    AND caching = {'keys': 'ALL', 'rows_per_partition': 'NONE'}
+    AND comment = ''
+    AND compaction = {'class': 'org.apache.cassandra.db.compaction.LeveledCompactionStrategy'}
+    AND compression = {'enabled': 'false'}
+    AND crc_check_chance = 1.0
+    AND dclocal_read_repair_chance = 0.1
+    AND default_time_to_live = 0
+    AND gc_grace_seconds = 864000
+    AND max_index_interval = 2048
+    AND memtable_flush_period_in_ms = 0
+    AND min_index_interval = 128
+    AND read_repair_chance = 0.0
+    AND speculative_retry = '99PERCENTILE';
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Data size per node: 500GB&lt;/li&gt;
+  &lt;li&gt;No. of tokens per node: 1 (no vnodes)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To trigger the streaming process we used the following steps in each of the clusters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;terminated a node&lt;/li&gt;
+  &lt;li&gt;add a new node as a replacement&lt;/li&gt;
+  &lt;li&gt;measure the time taken to complete streaming data by the new node replacing the terminated node&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For each cluster and version, we repeated this exercise multiple times to collect several samples.&lt;/p&gt;
+
+&lt;p&gt;Below is the distribution of streaming times we found across the clusters
+&lt;img src=&quot;/img/blog-post-benchmarking-streaming/cassandra_streaming.png&quot; alt=&quot;Benchmark results&quot; title=&quot;Benchmark results&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;interpreting-the-results&quot;&gt;Interpreting the Results&lt;/h3&gt;
+&lt;p&gt;Based on the graph above, there are many conclusions one can draw from it. Some of them are&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;3.0 streaming times are inconsistent and show high degree of variability (fat distributions across multiple samples)&lt;/li&gt;
+  &lt;li&gt;3.0 streaming is highly affected by the instance type and generally looks generally CPU bound&lt;/li&gt;
+  &lt;li&gt;Zero Copy streaming is approximately 5x faster&lt;/li&gt;
+  &lt;li&gt;Zero Copy streaming time shows little variability in its performance (thin distributions across multiple samples)&lt;/li&gt;
+  &lt;li&gt;Zero Copy streaming performance is not CPU bound and remains consistent across instance types&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It is clear from the performance test results that Zero Copy Streaming has a huge performance benefit over the current streaming infrastructure in Cassandra. But what does it mean in the real world? The following key points are the main take aways.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;MTTR (Mean Time to Recovery):&lt;/strong&gt; MTTR is a KPI (Key Performance Indicator) that is used to measure how quickly a system recovers from a failure. Zero Copy Streaming has a very direct impact here with a &lt;strong&gt;five fold improvement&lt;/strong&gt; on performance.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Costs:&lt;/strong&gt; Zero Copy Streaming is ~5x faster. This translates directly into cost for some organizations primarily as a result of reducing the need to maintain spare server or cloud capacity. In other situations where you’re migrating data to larger instance types or moving AZs or DCs, this means that instances that are sending data can be turned off sooner saving costs. An added cost benefit is that now you don’t have to over provision the instance. You get a similar streaming performance whether you use a i3.xl or an i3.8xl provided the bandwidth is available to the instance.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Risk Reduction:&lt;/strong&gt; There is a great reduction in the risk due to Zero Copy Streaming as well. Since a Cluster’s recovery mainly depends on the streaming speed, Cassandra clusters with failed nodes will be able to recover much more quickly (5x faster). This means the window of vulnerability is reduced significantly, in some situations down to few minutes.&lt;/p&gt;
+
+&lt;p&gt;Finally, a benefit that we generally don’t talk about is the environmental benefit of this change. Zero Copy Streaming enables us to move data very quickly through the cluster. It objectively reduces the number and sizes of instances that are used to build Cassandra cluster. As a result not only does it reduce Cassandra’s TCO (Total Cost of Ownership), it also helps the environment by consuming fewer resources!&lt;/p&gt;</content><author><name>The Apache Cassandra Community</name></author><summary type="html">Streaming is a process where nodes of a cluster exchange data in the form of SSTables. Streaming can kick in during many situations such as bootstrap, repair, rebuild, range movement, cluster expansion, etc. In this post, we discuss the massive performance improvements made to the streaming process in Apache Cassandra 4.0.</summary></entry><entry><title type="html">Introducing Transient Replication</title><link href="http://cassandra.apache.org/blog/2018/12/03/introducing-transient-replication.html" rel="alternate" type="text/html" title="Introducing Transient Replication" /><published>2018-12-03T08:00:00+00:00</published><updated>2018-12-03T08:00:00+00:00</updated><id>http://cassandra.apache.org/blog/2018/12/03/introducing-transient-replication</id><content type="html" xml:base="http://cassandra.apache.org/blog/2018/12/03/introducing-transient-replication.html">&lt;p&gt;Transient Replication is a new experimental feature soon to be available in 4.0. When enabled, it allows for the creation of keyspaces where replication factor can be specified as a number of copies (full replicas) and temporary copies (transient replicas). Transient replicas retain the data they replicate only long enough for it to be propagated to full replicas, via incremental repair, at which point the data is deleted. Writing to transient replicas can be avoided almost entirely if monotonic reads are not required because it is possible to achieve a quorum of acknowledged writes without them.&lt;/p&gt;
+
+&lt;p&gt;This results in a savings in disk space, CPU, and IO. By deleting data as soon as it is no longer needed, transient replicas require only a fraction of the disk space of a full replica. By not having to store the data indefinitely, the CPU and IO required for compaction is reduced, and read queries are faster as they have less data to process.&lt;/p&gt;
+
+&lt;p&gt;So what are the benefits of not actually keeping a full copy of the data? Well, for some installations and use cases, transient replicas can be almost free if &lt;a href=&quot;https://en.wikipedia.org/wiki/Consistency_model#Monotonic_Read_Consistency&quot;&gt;monotonic reads&lt;/a&gt; are disabled. In future releases where monotonic reads are supported with Transient Replication, enabling monotonic reads would reduce the savings in CPU and IO, but even then they should still be significant.&lt;/p&gt;
+
+&lt;p&gt;Transient Replication is designed to be transparent to applications:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Consistency levels continue to produce the same results for queries.&lt;/li&gt;
+  &lt;li&gt;The number of replicas that can be lost before data loss occurs is unchanged.&lt;/li&gt;
+  &lt;li&gt;The number of replicas that can be unavailable before some queries start to timeout or return unavailable is unchanged (with the exception of ONE).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With Transient Replication, you can go from 3 replicas to 5 replicas, two of which are transient, without adding any hardware.&lt;/p&gt;
+
+&lt;p&gt;If you are running an active-passive 2 DC setup with 3 replicas in each DC, you can make one replica in each DC transient and still have four full copies of the data in total.&lt;/p&gt;
+
+&lt;h2 id=&quot;feature-support&quot;&gt;Feature support&lt;/h2&gt;
+
+&lt;p&gt;Transient Replication is not intended to fully replace Cassandra’s existing approach to replication. There are features that currently don’t work with transiently replicated keyspaces and features that are unlikely ever to work with them.&lt;/p&gt;
+
+&lt;p&gt;You can have keyspaces with and without Transient Replication enabled in the same cluster, so it is possible to use Transient Replication for just the use cases that are a good fit for the currently available functionality.&lt;/p&gt;
+
+&lt;h3 id=&quot;currently-unsupported-but-coming&quot;&gt;Currently unsupported but coming:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Monotonic reads&lt;/li&gt;
+  &lt;li&gt;Batch log&lt;/li&gt;
+  &lt;li&gt;LWT&lt;/li&gt;
+  &lt;li&gt;Counters&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;will-never-be-supported&quot;&gt;Will never be supported:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Secondary indexes&lt;/li&gt;
+  &lt;li&gt;Materialized views&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-transient-replication-works&quot;&gt;How Transient Replication works&lt;/h2&gt;
+
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;Transient replication extends Cassandra’s existing consistent hashing algorithm to designate some replicas of a point or range on the consistent hash ring as transient and some as full. The following image depicts a consistent hash ring with three replicas &lt;strong&gt;A&lt;/strong&gt;, &lt;strong&gt;B&lt;/strong&gt;, and &lt;strong&gt;C&lt;/strong&gt;. The replicas are located at tokens 5, 10, 15 respectively. A key &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt; hashes to token 3 on the ring.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-introducing-transient-replication/diagram-hash-ring.gif&quot; alt=&quot;A consistent hash ring without Transient Replication&quot; title=&quot;A consistent hash ring without Rransient Replication&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Replicas are selected by walking the ring clockwise starting at the point on the ring the key hashes to. At RF=3, the replicas of key &lt;strong&gt;&lt;em&gt;k **&lt;/em&gt;are **A&lt;/strong&gt;, &lt;strong&gt;B&lt;/strong&gt;, &lt;strong&gt;C&lt;/strong&gt;.
+With Transient Replication, the last N replicas (where N is the configured number of transient replicas) found while walking the ring are designated as transient.&lt;/p&gt;
+
+&lt;p&gt;There are no nodes designated as transient replicas or full replicas. All nodes will fully replicate some ranges on the ring and transiently replicate others.&lt;/p&gt;
+
+&lt;p&gt;The following image depicts a consistent hash ring at RF=3/1 (three replicas, one of which is transient). The replicas of &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt; are still &lt;strong&gt;A&lt;/strong&gt;, &lt;strong&gt;B&lt;/strong&gt;, and &lt;strong&gt;C&lt;/strong&gt;, but &lt;strong&gt;C&lt;/strong&gt; is now transiently replicating &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-introducing-transient-replication/diagram-hash-ring-with-transient-replica.gif&quot; alt=&quot;A consistent hash ring with Transient Replication&quot; title=&quot;A consistent hash ring with Transient Replication&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Normally all replicas of a range receive all writes for that range, as depicted in the following image.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-introducing-transient-replication/diagram-regular-write.gif&quot; alt=&quot;Normal write behavior&quot; title=&quot;Normal write behavior&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Transient replicas do not receive writes in the normal write path.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-introducing-transient-replication/diagram-transient-write.gif&quot; alt=&quot;Transient write behavior&quot; title=&quot;Transient write behavior&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If sufficient full replicas are unavailable, transient replicas will receive writes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-introducing-transient-replication/diagram-transient-write-down-node.gif&quot; alt=&quot;Transient write with unavailable node&quot; title=&quot;Transient write with unavailable node&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This optimization, which is possible with Transient Replication, is called Cheap Quorums. This minimizes the amount of work that transient replicas have to do at write time, and reduces the amount of background compaction they will have to do.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cheap Quorums and monotonic reads:&lt;/strong&gt; Cheap Quorums may end up being incompatible with an initial implementation of monotonic reads, and operators will be able to make a conscious trade off between performance and monotonic reads.&lt;/p&gt;
+
+&lt;h3 id=&quot;rapid-write-protection&quot;&gt;Rapid write protection&lt;/h3&gt;
+
+&lt;p&gt;In keyspaces utilizing Transient Replication, writes are sent to every full replica and enough transient replicas to meet the requested consistency level (to make up for unavailable full replicas). In addition, enough transient replicas are selected to reach a quorum in every datacenter, though unless the consistency level requires it, the write will be acknowledged without ensuring all have been delivered.&lt;/p&gt;
+
+&lt;p&gt;Because not all replicas are sent the write, it’s possible that insufficient replicas will respond, causing timeouts.  To prevent this, we implement rapid write protection, similar to rapid read protection, that sends writes to additional replicas if sufficient acknowledgements to meet the consistency level are not received promptly.&lt;/p&gt;
+
+&lt;p&gt;The following animation shows rapid write protection in action.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog-post-introducing-transient-replication/diagram-rapid-write-protection.gif&quot; alt=&quot;Animation of rapid write protection preventing a write timeout&quot; title=&quot;Rapid write protection preventing a write timeout&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Rapid write protection is configured similarly to rapid read protection using the table option &lt;code class=&quot;highlighter-rouge&quot;&gt;additional_write_policy&lt;/code&gt;. The policy determines how long to wait for acknowledgements before sending additional mutations. The default is to wait for P99 of the observed latency.&lt;/p&gt;
+
+&lt;h3 id=&quot;incremental-repair&quot;&gt;Incremental repair&lt;/h3&gt;
+
+&lt;p&gt;Incremental repair is used to clean up transient data at transient replicas and propagate it to full replicas.&lt;/p&gt;
+
+&lt;p&gt;When incremental repair occurs transient replicas stream out transient data, but don’t receive any. Anti-compaction is used to separate transient and fully replicated data so that only fully replicated data is retained once incremental repair completes.&lt;/p&gt;
+
+&lt;p&gt;The result of running an incremental repair is that all full replicas for a range are synchronized and can be used interchangeably to retrieve the repaired data set for a query.&lt;/p&gt;
+
+&lt;h3 id=&quot;read-path&quot;&gt;Read path&lt;/h3&gt;
+
+&lt;p&gt;Reads must always include at least one full replica and can include as many replicas (transient or full) as necessary to achieve the desired consistency level. At least one full replica is required in order to provide the data not available at transient replicas, but it doesn’t matter which full replica is picked because incremental repair synchronizes the repaired data set across full replicas.&lt;/p&gt;
+
+&lt;p&gt;Reads at transient replicas are faster than reads at full replicas because reads at transient replicas are unlikely to return any results if monotonic reads are disabled, and they haven’t been receiving writes.&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-keyspaces-with-transient-replication&quot;&gt;Creating keyspaces with Transient Replication&lt;/h2&gt;
+
+&lt;p&gt;Transient Replication is supported by SimpleStrategy and NetworkTopologyStrategy. When specifying the replication factor, you can specify the number of transient replicas in addition to the total number of replicas (including transient replicas). The syntax for a replication factor of 3 replicas total with one of them being transient would be “3/1”.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ALTER KEYSPACE foo WITH REPLICATION = {'class' : 'NetworkTopologyStrategy', 'DC1' : '3/1'};
+ALTER KEYSPACE foo WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : '3/1'};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Monotonic reads are not supported with Transient Replication in 4.0, so any existing tables in the keyspace must have monotonic reads disabled by setting &lt;code class=&quot;highlighter-rouge&quot;&gt;read_repair = 'NONE'&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Once the keyspace has been altered, you will need to run incremental repair and then nodetool cleanup to ensure  transient data is cleaned up.&lt;/p&gt;
+
+&lt;h2 id=&quot;operational-matters&quot;&gt;Operational matters&lt;/h2&gt;
+
+&lt;p&gt;Transient replication requires rolling incremental repair to be run regularly in order to move data from transient replicas to full replicas. By default transient replicas will receive 1% of writes for transiently replicated ranges due to rapid write protection. If a node is down for an extended period of time, its transient replicas will receive additional write load and that data should be cleaned up using incremental repair. Running incremental repair regularly will ensure that the size of each repair is small.&lt;/p&gt;
+
+&lt;p&gt;It’s also a good idea to run a small number of vnodes with transient replication so that when a node goes down the load is spread out over several other nodes that transiently replicate that range. Larges numbers of vnodes are known to be problematic, so it’s best to start with a cluster that is already close to or at its maximum size so that a small number of vnodes will be sufficient. If you intend to grow the cluster in the future, you will need to be cognizant of how this will interact with the number of vnodes you select.&lt;/p&gt;
+
+&lt;p&gt;While the odds of any data loss should multiple nodes be permanently lost remain the same with transient replication, the magnitude of potential data loss does not. With 3/1 transient replication the permanent loss of two nodes could result in the loss of the entirety of the repaired data set. If you are running a multi-DC setup with a high level of replication such as 2 DCs, with 3/1 replicas in each, then you will have 4 full copies total and the added risk of transient replication is minimal.&lt;/p&gt;
+
+&lt;h2 id=&quot;experimental-features&quot;&gt;Experimental features&lt;/h2&gt;
+
+&lt;p&gt;Experimental features are a relatively new idea for Apache Cassandra. Although we recently voted to make materialized views an experimental feature retroactively, Transient Replication is the first experimental feature to be introduced as such.&lt;/p&gt;
+
+&lt;p&gt;The goal of introducing experimental features is to allow for incremental development across multiple releases. In the case of Transient Replication, we can avoid a giant code drop that heavily modifies the code base, and the associated risks with incorporating a new feature that way.&lt;/p&gt;
+
+&lt;p&gt;What it means for a feature to be experimental doesn’t have a set definition, but for Transient Replication it’s intended to set expectations. As of 4.0, Transient Replication’s intended audience is expert operators of Cassandra with the ability to write the book on how to safely deploy Transient Replication, debug any issues that result, and if necessary contribute code back to address problems as they are discovered.&lt;/p&gt;
+
+&lt;p&gt;It’s expected that the feature set for Transient Replication will not change in minor updates to 4.0, but eventually it should be ready for use by a wider audience.&lt;/p&gt;
+
+&lt;h2 id=&quot;next-steps-for-transient-replication&quot;&gt;Next steps for Transient Replication&lt;/h2&gt;
+
+&lt;p&gt;If increasing availability or saving on capacity sounds good to you, then you can help make transient replication production-ready by testing it out or even deploying it. Experience and feedback from the community is one the of the things that will drive transient replication bug fixing and development.&lt;/p&gt;</content><author><name>The Apache Cassandra Community</name></author><summary type="html">Transient Replication is a new experimental feature soon to be available in 4.0. When enabled, it allows for the creation of keyspaces where replication factor can be specified as a number of copies (full replicas) and temporary copies (transient replicas). Transient replicas retain the data they replicate only long enough for it to be propagated to full replicas, via incremental repair, at which point the data is deleted. Writing to transient replicas can be avoided almost entirely if monotonic reads are not required because it is possible to achieve a quorum of acknowledged writes without them.</summary></entry></feed>
