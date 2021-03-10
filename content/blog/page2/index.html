@@ -102,6 +102,15 @@
     <ul class="blog-post-listing">
       
         <li class="blog-post">
+          <h4><a href="/blog/2020/09/17/cassandra-usage-report-2020.html">Apache Cassandra Usage Report 2020</a></h4>
+          <p>Posted on September 17, 2020 by the Apache Cassandra Community</p>
+          <p>Apache Cassandra is the open source NoSQL database for mission critical data. Today the community announced findings from a comprehensive global survey of 901 practitioners on Cassandra usage. It’s the first of what will become an annual survey that provides a baseline understanding of who, how, and why organizations use Cassandra.</p>
+
+
+          <h5><a href="/blog/2020/09/17/cassandra-usage-report-2020.html">Read more &raquo;</a></h5>
+        </li>
+      
+        <li class="blog-post">
           <h4><a href="/blog/2020/09/03/improving-resiliency.html">Improving Apache Cassandra’s Front Door and Backpressure</a></h4>
           <p>Posted on September 03, 2020 by the Apache Cassandra Community</p>
           <p>As part of <a href="https://issues.apache.org/jira/browse/CASSANDRA-15013">CASSANDRA-15013</a>, we have improved Cassandra’s ability to handle high throughput workloads, while having enough safeguards in place to protect itself from potentially going out of memory. In order to better explain the change we have made, let us understand at a high level, on how an incoming request is processed by Cassandra before the fix, followed by what we changed, and the new relevant configuration knobs available.</p>
@@ -135,15 +144,6 @@
 
 
           <h5><a href="/blog/2019/04/09/benchmarking_streaming.html">Read more &raquo;</a></h5>
-        </li>
-      
-        <li class="blog-post">
-          <h4><a href="/blog/2018/12/03/introducing-transient-replication.html">Introducing Transient Replication</a></h4>
-          <p>Posted on December 03, 2018 by The Apache Cassandra Community</p>
-          <p>Transient Replication is a new experimental feature soon to be available in 4.0. When enabled, it allows for the creation of keyspaces where replication factor can be specified as a number of copies (full replicas) and temporary copies (transient replicas). Transient replicas retain the data they replicate only long enough for it to be propagated to full replicas, via incremental repair, at which point the data is deleted. Writing to transient replicas can be avoided almost entirely if monotonic reads are not required because it is possible to achieve a quorum of acknowledged writes without them.</p>
-
-
-          <h5><a href="/blog/2018/12/03/introducing-transient-replication.html">Read more &raquo;</a></h5>
         </li>
       
     </ul>

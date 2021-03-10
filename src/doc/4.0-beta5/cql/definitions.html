@@ -126,8 +126,10 @@ this document suggests otherwise. Also, not everything accepted by the grammar i
 </div>
 <div class="section" id="identifiers">
 <span id="identifiers-and-keywords"></span><h2>Identifiers and keywords<a class="headerlink" href="#identifiers" title="Permalink to this headline">¶</a></h2>
-<p>The CQL language uses <em>identifiers</em> (or <em>names</em>) to identify tables, columns and other objects. An identifier is a token
-matching the regular expression <code class="docutils literal notranslate"><span class="pre">[a-zA-Z][a-zA-Z0-9_]*</span></code>.</p>
+<p>The CQL language uses <em>identifiers</em> (or <em>names</em>) to identify tables, columns and other objects. An identifier can be either
+unquoted or quoted. The unquoted identifier is a token matching the regular expression <code class="docutils literal notranslate"><span class="pre">[a-zA-Z][a-zA-Z0-9_]*</span></code>.
+In the case of quoted, the identity can contain non-ASCII characters between the quotation marks, with one exception that
+Cassandra does not accept non-ASCII characters, if the quoted identifier is used for keyspace name or table name.</p>
 <p>A number of such identifiers, like <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> or <code class="docutils literal notranslate"><span class="pre">WITH</span></code>, are <em>keywords</em>. They have a fixed meaning for the language
 and most are reserved. The list of those keywords can be found in <a class="reference internal" href="appendices.html#appendix-a"><span class="std std-ref">Appendix A: CQL Keywords</span></a>.</p>
 <p>Identifiers and (unquoted) keywords are case insensitive. Thus <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> is the same than <code class="docutils literal notranslate"><span class="pre">select</span></code> or <code class="docutils literal notranslate"><span class="pre">sElEcT</span></code>, and

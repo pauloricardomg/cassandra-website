@@ -104,7 +104,7 @@ with every Cassandra package, and can be found in the bin/ directory alongside t
 the Python native protocol driver, and connects to the single node specified on the command line.</p>
 <div class="section" id="compatibility">
 <h2>Compatibility<a class="headerlink" href="#compatibility" title="Permalink to this headline">¶</a></h2>
-<p>cqlsh is compatible with Python 2.7.</p>
+<p>cqlsh is compatible with Python 3.6+ (and 2.7, deprecated).</p>
 <p>In general, a given version of cqlsh is only guaranteed to work with the version of Cassandra that it was released with.
 In some cases, cqlsh make work with older or newer versions of Cassandra, but this is not officially supported.</p>
 </div>
@@ -142,7 +142,7 @@ can also view the latest version of <a class="reference external" href="https://
 <dt><code class="docutils literal notranslate"><span class="pre">--no-color</span></code></dt>
 <dd>Disable color output</dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--browser</span></code></dt>
-<dd>Specify the browser to use for displaying cqlsh help.  This can be one of the <a class="reference external" href="https://docs.python.org/2/library/webbrowser.html">supported browser names</a> (e.g. <code class="docutils literal notranslate"><span class="pre">firefox</span></code>) or a browser path followed by <code class="docutils literal notranslate"><span class="pre">%s</span></code> (e.g.
+<dd>Specify the browser to use for displaying cqlsh help.  This can be one of the <a class="reference external" href="https://docs.python.org/3/library/webbrowser.html">supported browser names</a> (e.g. <code class="docutils literal notranslate"><span class="pre">firefox</span></code>) or a browser path followed by <code class="docutils literal notranslate"><span class="pre">%s</span></code> (e.g.
 <code class="docutils literal notranslate"><span class="pre">/usr/bin/google-chrome-stable</span> <span class="pre">%s</span></code>).</dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--ssl</span></code></dt>
 <dd>Use SSL when connecting to Cassandra</dd>
