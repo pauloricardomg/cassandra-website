@@ -1,0 +1,50 @@
+= Join Apache Cassandra’s Google Summer of Code Program
+:page-layout: single-post
+:page-role: blog-post
+:page-post-date: March 7, 2022
+:page-post-author: Paulo Motta
+:description: The Apache Cassandra Community
+:keywords: 
+
+It’s time to don your shades and sandals! Apache Cassandra will be participating in the Google Summer of Code (GSoc) in 2022 again after a successful project in 2021, and the program itself this year has some changes we are excited to announce.
+
+GSoC is a program, sponsored by Google, that promotes open source development and enables individuals to submit project proposals to open source mentor organizations. The Apache Software Foundation (ASF) has been a GSoC mentor organization for the past 17 years and acts as an "umbrella" organization, which means that applicants can submit project proposals to any subproject within the ASF, including Apache Cassandra.
+
+=== GSoC: Big changes
+
+Previously, the program has only been open to post-secondary students, such as university students or recent graduates, but this year it will be open to *anyone 18 years and older* who is an *open source newcomer*.
+
+GSoC has recognized that the program can benefit anyone at various stages of their career, and that includes people changing careers, those who are self-taught, and those returning to the workforce and more. The goal is to create a starting point for anyone who isn’t sure how to get started in open source or uncertain whether open source communities would welcome their contributions.
+
+You can find more details about the program on the official https://summerofcode.withgoogle.com/programs/2022[GSoC^] website, including information on stipends.
+
+=== How to get involved
+
+. Getting started
+
+The best way to get started if you're new to the Apache Cassandra project and are interested in submitting a GSoC proposal is to get acquainted with Apache Cassandra by reading the link:/doc/latest/index.html[documentation] and setting up a local link:/doc/latest/development/ide.html[development environment]. Play around with a locally running instance via link:/doc/latest/tools/cqlsh.html[cqlsh] and link:/doc/latest/tools/nodetool/nodetool.html[nodetool] to get a feel for how to use the database. If you run into problems or roadblocks during this exercise, don't be shy to ask questions via the xref:community.adoc[community] channels. On https://infra.apache.org/slack.html[Slack^], we have established a dedicated #cassandra-gsoc channel and you can also join the mailto:dev-subscribe@cassandra.apache.org[developers mailing list^] or the #cassandra-dev channel on Slack.
+
+[start=2]
+. Selecting a project
+
+Once you have a basic understanding of how the project works, browse the https://issues.apache.org/jira/browse/CASSANDRA-17381?jql=project%20%3D%20CASSANDRA%20AND%20labels%20in%20(gsoc2022%2C%20gsoc22)[GSoC 2022 ideas list^] to select ideas that you are interested in working on. Browse the https://github.com/apache/cassandra/[codebase^] to identify components related to the idea that you picked. 
+
+Currently, we have two projects with appointed mentors: 
+
+** https://issues.apache.org/jira/browse/CASSANDRA-17380[Add support to EXPLAIN (CASSANDRA-17380)^].
+Mentor: Benjamin Lerer
+A project for adding functionality to CQL so that it supports EXPLAIN, which providers users with a way to understand how their query will be executed and some information on the amount of work that will be performed. For more details please refer to https://docs.google.com/document/d/1s_gc4TDYdDbHnYHHVxxjqVVUn3MONUqG6W2JehnC11g/edit[Cassandra Enhanced Propal (CEP) draft 4^].
+** https://issues.apache.org/jira/browse/CASSANDRA-17381[Produce and verify BoundedReadCompactionStrategy as a unified general purpose compaction algorithm (CASSANDRA-17381)^]
+Mentor: Joey Lynch
+
+You are welcome to propose other projects if they’re not on the ideas list.
+
+[start=3]
+. Writing a proposal
+
+Write a message on the JIRA ticket introducing yourself and demonstrating your interest in working on that particular idea. Sketch a quick proposal on how you plan to tackle the problem and share it with the community for feedback. If you don't know where to start, don't hesitate to ask for help!
+
+[start=4]
+. Useful resources
+
+There are many good resources on the web on preparing for GSoC, particularly the https://community.apache.org/gsoc.html[ASF GSoC Guide^] and the Python community notes on https://wiki.python.org/moin/SummerOfCode/Expectations[GSoC expectations^]. The best GSoC participants are self-motivated and proactive, and following the tips above should increase your chances of getting selected and delivering your project successfully. Good luck!
