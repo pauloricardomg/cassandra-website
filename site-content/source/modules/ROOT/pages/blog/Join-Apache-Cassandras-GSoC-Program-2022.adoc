@@ -37,6 +37,7 @@ Mentor: Benjamin Lerer
 +
 A project for adding functionality to CQL so that it supports EXPLAIN, which providers users with a way to understand how their query will be executed and some information on the amount of work that will be performed. For more details please refer to https://docs.google.com/document/d/1s_gc4TDYdDbHnYHHVxxjqVVUn3MONUqG6W2JehnC11g/edit[Cassandra Enhanced Proposal (CEP) draft 4^].
 ** https://issues.apache.org/jira/browse/CASSANDRA-17381[Produce and verify BoundedReadCompactionStrategy as a unified general purpose compaction algorithm (CASSANDRA-17381)^]
++
 Mentor: Joey Lynch
 
 You are welcome to propose other projects if they’re not on the ideas list.
