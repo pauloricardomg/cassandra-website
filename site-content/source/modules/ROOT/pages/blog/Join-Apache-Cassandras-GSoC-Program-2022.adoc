@@ -47,7 +47,7 @@ Potential mentors will give you initial instructions on how to get started and s
 
 #### Getting Started With Apache Cassandra Development
 
-The best way to get started if you're new to Apache Cassandra is to get acquainted with the project's link:/doc/latest/index.html[documentation] and setup up a local xref:development/ide.adoc[development environment].
+The best way to get started if you're new to Apache Cassandra is to get acquainted with the project's link:/doc/latest/index.html[documentation] and set up a local xref:development/ide.adoc[development environment].
 
 Play around with a locally running instance via link:/doc/latest/cassandra/tools/cqlsh.html[cqlsh] and link:/doc/latest/cassandra/tools/nodetool/nodetool.html[nodetool] to get a feel for how to use the database. 
 
