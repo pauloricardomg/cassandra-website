@@ -45,6 +45,6 @@ You are welcome to propose other projects if they’re not on the ideas list.
 Write a message on the JIRA ticket introducing yourself and demonstrating your interest in working on that particular idea. Sketch a quick proposal on how you plan to tackle the problem and share it with the community for feedback. If you don't know where to start, don't hesitate to ask for help!
 
 [start=4]
-. Useful resources
+#### Useful resources
 
 There are many good resources on the web on preparing for GSoC, particularly the https://community.apache.org/gsoc.html[ASF GSoC Guide^] and the Python community notes on https://wiki.python.org/moin/SummerOfCode/Expectations[GSoC expectations^]. The best GSoC participants are self-motivated and proactive, and following the tips above should increase your chances of getting selected and delivering your project successfully. Good luck!
