@@ -40,7 +40,7 @@ Mentor: Joey Lynch
 You are welcome to propose other projects if they’re not on the ideas list.
 
 [start=3]
-. Writing a proposal
+#### Writing a proposal
 
 Write a message on the JIRA ticket introducing yourself and demonstrating your interest in working on that particular idea. Sketch a quick proposal on how you plan to tackle the problem and share it with the community for feedback. If you don't know where to start, don't hesitate to ask for help!
 
